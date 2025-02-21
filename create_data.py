@@ -55,7 +55,7 @@ def seq_cat(prot):
 
 # from DeepDTA data
 all_prots = []
-datasets = ['kiba','davis']
+datasets = ['davis']
 for dataset in datasets:
     print('convert data from DeepDTA for ', dataset)
     fpath = 'data/' + dataset + '/'
@@ -65,6 +65,8 @@ for dataset in datasets:
     ligands = json.load(open(fpath + "ligands_can.txt"), object_pairs_hook=OrderedDict)
     proteins = json.load(open(fpath + "proteins.txt"), object_pairs_hook=OrderedDict)
     affinity = pickle.load(open(fpath + "Y","rb"), encoding='latin1')
+    print(affinity.shape)
+    print(affinity)
     drugs = []
     prots = []
     for d in ligands.keys():
@@ -77,6 +79,10 @@ for dataset in datasets:
     affinity = np.asarray(affinity)
     opts = ['train','test']
     for opt in opts:
+        print('AAAAAGDUAYGFYADGFLAUNDFLIUASHFNLIAAAAAA',dataset)
+        print("Affinity type:", type(affinity))
+        print("Affinity shape:", getattr(affinity, "shape", "No shape attribute"))
+        print("Affinity content preview:", affinity)
         rows, cols = np.where(np.isnan(affinity)==False)  
         if opt=='train':
             rows,cols = rows[train_fold], cols[train_fold]
@@ -103,7 +109,7 @@ seq_dict_len = len(seq_dict)
 max_seq_len = 1000
 
 compound_iso_smiles = []
-for dt_name in ['kiba','davis']:
+for dt_name in ['davis']:
     opts = ['train','test']
     for opt in opts:
         df = pd.read_csv('data/' + dt_name + '_' + opt + '.csv')
@@ -114,7 +120,7 @@ for smile in compound_iso_smiles:
     g = smile_to_graph(smile)
     smile_graph[smile] = g
 
-datasets = ['davis','kiba']
+datasets = ['davis']
 # convert to PyTorch data format
 for dataset in datasets:
     processed_data_file_train = 'data/processed/' + dataset + '_train.pt'

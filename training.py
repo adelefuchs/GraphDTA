@@ -51,7 +51,7 @@ def predicting(model, device, loader):
     return total_labels.numpy().flatten(), total_preds.numpy().flatten()
 
 
-datasets = [["davis", "kiba"][int(sys.argv[1])]]
+datasets = [["davis"][int(sys.argv[1])]]
 modeling = [GINConvNet, GATNet, GAT_GCN, GCNNet][int(sys.argv[2])]
 model_st = modeling.__name__
 
@@ -64,7 +64,7 @@ TRAIN_BATCH_SIZE = 512
 TEST_BATCH_SIZE = 512
 LR = 0.0005
 LOG_INTERVAL = 20
-NUM_EPOCHS = 25
+NUM_EPOCHS = 1000
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Running on device: {device}")
 print(torch.cuda.is_available())

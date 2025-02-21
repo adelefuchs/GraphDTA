@@ -1,0 +1,1868 @@
+Requirement already satisfied: pip in ./myvenv/lib/python3.10/site-packages (25.0)
+Requirement already satisfied: numpy in ./myvenv/lib/python3.10/site-packages (2.2.2)
+Requirement already satisfied: pandas in ./myvenv/lib/python3.10/site-packages (2.2.3)
+Requirement already satisfied: torch-geometric in ./myvenv/lib/python3.10/site-packages (2.6.1)
+Requirement already satisfied: scikit-learn in ./myvenv/lib/python3.10/site-packages (1.6.1)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./myvenv/lib/python3.10/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./myvenv/lib/python3.10/site-packages (from pandas) (2025.1)
+Requirement already satisfied: tzdata>=2022.7 in ./myvenv/lib/python3.10/site-packages (from pandas) (2025.1)
+Requirement already satisfied: aiohttp in ./myvenv/lib/python3.10/site-packages (from torch-geometric) (3.11.12)
+Requirement already satisfied: fsspec in ./myvenv/lib/python3.10/site-packages (from torch-geometric) (2025.2.0)
+Requirement already satisfied: jinja2 in ./myvenv/lib/python3.10/site-packages (from torch-geometric) (3.1.5)
+Requirement already satisfied: psutil>=5.8.0 in ./myvenv/lib/python3.10/site-packages (from torch-geometric) (6.1.1)
+Requirement already satisfied: pyparsing in ./myvenv/lib/python3.10/site-packages (from torch-geometric) (3.2.1)
+Requirement already satisfied: requests in ./myvenv/lib/python3.10/site-packages (from torch-geometric) (2.32.3)
+Requirement already satisfied: tqdm in ./myvenv/lib/python3.10/site-packages (from torch-geometric) (4.67.1)
+Requirement already satisfied: scipy>=1.6.0 in ./myvenv/lib/python3.10/site-packages (from scikit-learn) (1.15.1)
+Requirement already satisfied: joblib>=1.2.0 in ./myvenv/lib/python3.10/site-packages (from scikit-learn) (1.4.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in ./myvenv/lib/python3.10/site-packages (from scikit-learn) (3.5.0)
+Requirement already satisfied: six>=1.5 in ./myvenv/lib/python3.10/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Requirement already satisfied: aiohappyeyeballs>=2.3.0 in ./myvenv/lib/python3.10/site-packages (from aiohttp->torch-geometric) (2.4.4)
+Requirement already satisfied: aiosignal>=1.1.2 in ./myvenv/lib/python3.10/site-packages (from aiohttp->torch-geometric) (1.3.2)
+Requirement already satisfied: async-timeout<6.0,>=4.0 in ./myvenv/lib/python3.10/site-packages (from aiohttp->torch-geometric) (5.0.1)
+Requirement already satisfied: attrs>=17.3.0 in ./myvenv/lib/python3.10/site-packages (from aiohttp->torch-geometric) (25.1.0)
+Requirement already satisfied: frozenlist>=1.1.1 in ./myvenv/lib/python3.10/site-packages (from aiohttp->torch-geometric) (1.5.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in ./myvenv/lib/python3.10/site-packages (from aiohttp->torch-geometric) (6.1.0)
+Requirement already satisfied: propcache>=0.2.0 in ./myvenv/lib/python3.10/site-packages (from aiohttp->torch-geometric) (0.2.1)
+Requirement already satisfied: yarl<2.0,>=1.17.0 in ./myvenv/lib/python3.10/site-packages (from aiohttp->torch-geometric) (1.18.3)
+Requirement already satisfied: MarkupSafe>=2.0 in ./myvenv/lib/python3.10/site-packages (from jinja2->torch-geometric) (3.0.2)
+Requirement already satisfied: charset-normalizer<4,>=2 in ./myvenv/lib/python3.10/site-packages (from requests->torch-geometric) (3.4.1)
+Requirement already satisfied: idna<4,>=2.5 in ./myvenv/lib/python3.10/site-packages (from requests->torch-geometric) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./myvenv/lib/python3.10/site-packages (from requests->torch-geometric) (2.3.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./myvenv/lib/python3.10/site-packages (from requests->torch-geometric) (2025.1.31)
+Requirement already satisfied: typing-extensions>=4.1.0 in ./myvenv/lib/python3.10/site-packages (from multidict<7.0,>=4.5->aiohttp->torch-geometric) (4.12.2)
+Requirement already satisfied: torch==2.5.1 in ./myvenv/lib/python3.10/site-packages (2.5.1)
+Requirement already satisfied: torchvision==0.20.1 in ./myvenv/lib/python3.10/site-packages (0.20.1)
+Requirement already satisfied: torchaudio==2.5.1 in ./myvenv/lib/python3.10/site-packages (2.5.1)
+Requirement already satisfied: filelock in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (3.17.0)
+Requirement already satisfied: typing-extensions>=4.8.0 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (4.12.2)
+Requirement already satisfied: networkx in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (3.4.2)
+Requirement already satisfied: jinja2 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (3.1.5)
+Requirement already satisfied: fsspec in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (2025.2.0)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.4.127 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (12.4.127)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.4.127 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (12.4.127)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.4.127 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (12.4.127)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu12==12.4.5.8 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (12.4.5.8)
+Requirement already satisfied: nvidia-cufft-cu12==11.2.1.3 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (11.2.1.3)
+Requirement already satisfied: nvidia-curand-cu12==10.3.5.147 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (10.3.5.147)
+Requirement already satisfied: nvidia-cusolver-cu12==11.6.1.9 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (11.6.1.9)
+Requirement already satisfied: nvidia-cusparse-cu12==12.3.1.170 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (12.3.1.170)
+Requirement already satisfied: nvidia-nccl-cu12==2.21.5 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (2.21.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.4.127 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (12.4.127)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.4.127 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (12.4.127)
+Requirement already satisfied: triton==3.1.0 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (3.1.0)
+Requirement already satisfied: sympy==1.13.1 in ./myvenv/lib/python3.10/site-packages (from torch==2.5.1) (1.13.1)
+Requirement already satisfied: numpy in ./myvenv/lib/python3.10/site-packages (from torchvision==0.20.1) (2.2.2)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in ./myvenv/lib/python3.10/site-packages (from torchvision==0.20.1) (11.1.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in ./myvenv/lib/python3.10/site-packages (from sympy==1.13.1->torch==2.5.1) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in ./myvenv/lib/python3.10/site-packages (from jinja2->torch==2.5.1) (3.0.2)
+cuda_name: cuda:0
+Running on device: cuda
+True
+Learning rate:  0.0005
+Epochs:  150
+
+running on  GINConvNet_davis
+Pre-processed data found: data/processed/davis_train.pt, loading ...
+Pre-processed data found: data/processed/davis_test.pt, loading ...
+Training on 82468 samples...
+Train epoch: 1 [0/82468 (0%)]	Loss: 73.086311
+Train epoch: 1 [326760/82468 (12%)]	Loss: 1.162354
+Train epoch: 1 [651880/82468 (25%)]	Loss: 0.683882
+Train epoch: 1 [979680/82468 (37%)]	Loss: 0.489984
+Train epoch: 1 [1299520/82468 (49%)]	Loss: 0.382231
+Train epoch: 1 [1644300/82468 (62%)]	Loss: 0.452741
+Train epoch: 1 [1974960/82468 (74%)]	Loss: 0.326841
+Train epoch: 1 [2287320/82468 (86%)]	Loss: 0.312513
+Train epoch: 1 [2637120/82468 (99%)]	Loss: 0.307968
+Make prediction for 4124 samples...
+rmse improved at epoch  1 ; best_mse,best_ci: 0.039168946 0.513836147395621 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 2 [0/82468 (0%)]	Loss: 0.358363
+Train epoch: 2 [327960/82468 (12%)]	Loss: 0.282540
+Train epoch: 2 [651360/82468 (25%)]	Loss: 0.356408
+Train epoch: 2 [993960/82468 (37%)]	Loss: 0.268381
+Train epoch: 2 [1318640/82468 (49%)]	Loss: 0.244666
+Train epoch: 2 [1652300/82468 (62%)]	Loss: 0.312753
+Train epoch: 2 [1988160/82468 (74%)]	Loss: 0.302131
+Train epoch: 2 [2324140/82468 (86%)]	Loss: 0.339798
+Train epoch: 2 [2613280/82468 (99%)]	Loss: 0.228778
+Make prediction for 4124 samples...
+0.9496493 No improvement since epoch  1 ; best_mse,best_ci: 0.039168946 0.513836147395621 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 3 [0/82468 (0%)]	Loss: 0.538358
+Train epoch: 3 [330340/82468 (12%)]	Loss: 0.311365
+Train epoch: 3 [657800/82468 (25%)]	Loss: 0.327436
+Train epoch: 3 [993360/82468 (37%)]	Loss: 0.265585
+Train epoch: 3 [1327840/82468 (49%)]	Loss: 0.228868
+Train epoch: 3 [1642200/82468 (62%)]	Loss: 0.251321
+Train epoch: 3 [1971840/82468 (74%)]	Loss: 0.257240
+Train epoch: 3 [2323300/82468 (86%)]	Loss: 0.298488
+Train epoch: 3 [2702720/82468 (99%)]	Loss: 0.306448
+Make prediction for 4124 samples...
+0.26402298 No improvement since epoch  1 ; best_mse,best_ci: 0.039168946 0.513836147395621 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 4 [0/82468 (0%)]	Loss: 0.229855
+Train epoch: 4 [327920/82468 (12%)]	Loss: 0.258762
+Train epoch: 4 [671600/82468 (25%)]	Loss: 0.233903
+Train epoch: 4 [992580/82468 (37%)]	Loss: 0.213399
+Train epoch: 4 [1306400/82468 (49%)]	Loss: 0.238505
+Train epoch: 4 [1651500/82468 (62%)]	Loss: 0.243248
+Train epoch: 4 [1955760/82468 (74%)]	Loss: 0.245565
+Train epoch: 4 [2297960/82468 (86%)]	Loss: 0.218935
+Train epoch: 4 [2620800/82468 (99%)]	Loss: 0.257804
+Make prediction for 4124 samples...
+0.45373031 No improvement since epoch  1 ; best_mse,best_ci: 0.039168946 0.513836147395621 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 5 [0/82468 (0%)]	Loss: 0.328382
+Train epoch: 5 [330780/82468 (12%)]	Loss: 0.243997
+Train epoch: 5 [660400/82468 (25%)]	Loss: 0.204068
+Train epoch: 5 [989340/82468 (37%)]	Loss: 0.229696
+Train epoch: 5 [1324480/82468 (49%)]	Loss: 0.231248
+Train epoch: 5 [1656300/82468 (62%)]	Loss: 0.245389
+Train epoch: 5 [1998000/82468 (74%)]	Loss: 0.234498
+Train epoch: 5 [2306640/82468 (86%)]	Loss: 0.207954
+Train epoch: 5 [2647680/82468 (99%)]	Loss: 0.246433
+Make prediction for 4124 samples...
+0.13500865 No improvement since epoch  1 ; best_mse,best_ci: 0.039168946 0.513836147395621 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 6 [0/82468 (0%)]	Loss: 0.224380
+Train epoch: 6 [327280/82468 (12%)]	Loss: 0.222975
+Train epoch: 6 [658240/82468 (25%)]	Loss: 0.211346
+Train epoch: 6 [984540/82468 (37%)]	Loss: 0.233409
+Train epoch: 6 [1319440/82468 (49%)]	Loss: 0.226838
+Train epoch: 6 [1635300/82468 (62%)]	Loss: 0.243124
+Train epoch: 6 [1975200/82468 (74%)]	Loss: 0.595520
+Train epoch: 6 [2294180/82468 (86%)]	Loss: 0.204969
+Train epoch: 6 [2626560/82468 (99%)]	Loss: 0.239956
+Make prediction for 4124 samples...
+rmse improved at epoch  6 ; best_mse,best_ci: 0.019038321 0.5843477712659432 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 7 [0/82468 (0%)]	Loss: 0.269332
+Train epoch: 7 [327080/82468 (12%)]	Loss: 0.250348
+Train epoch: 7 [667560/82468 (25%)]	Loss: 0.243607
+Train epoch: 7 [997200/82468 (37%)]	Loss: 0.275551
+Train epoch: 7 [1313440/82468 (49%)]	Loss: 0.256146
+Train epoch: 7 [1649200/82468 (62%)]	Loss: 0.218178
+Train epoch: 7 [1993080/82468 (74%)]	Loss: 0.220597
+Train epoch: 7 [2274160/82468 (86%)]	Loss: 0.241080
+Train epoch: 7 [2680320/82468 (99%)]	Loss: 0.320835
+Make prediction for 4124 samples...
+0.032003324 No improvement since epoch  6 ; best_mse,best_ci: 0.019038321 0.5843477712659432 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 8 [0/82468 (0%)]	Loss: 0.336390
+Train epoch: 8 [331780/82468 (12%)]	Loss: 0.237768
+Train epoch: 8 [654120/82468 (25%)]	Loss: 0.245299
+Train epoch: 8 [994200/82468 (37%)]	Loss: 0.285735
+Train epoch: 8 [1309280/82468 (49%)]	Loss: 0.323690
+Train epoch: 8 [1658300/82468 (62%)]	Loss: 0.235868
+Train epoch: 8 [1988040/82468 (74%)]	Loss: 0.229977
+Train epoch: 8 [2337720/82468 (86%)]	Loss: 0.270174
+Train epoch: 8 [2644480/82468 (99%)]	Loss: 0.235926
+Make prediction for 4124 samples...
+0.36783385 No improvement since epoch  6 ; best_mse,best_ci: 0.019038321 0.5843477712659432 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 9 [0/82468 (0%)]	Loss: 0.390271
+Train epoch: 9 [326200/82468 (12%)]	Loss: 0.236480
+Train epoch: 9 [654320/82468 (25%)]	Loss: 0.207796
+Train epoch: 9 [982620/82468 (37%)]	Loss: 0.272443
+Train epoch: 9 [1303440/82468 (49%)]	Loss: 0.198569
+Train epoch: 9 [1639300/82468 (62%)]	Loss: 0.239797
+Train epoch: 9 [1984560/82468 (74%)]	Loss: 0.237128
+Train epoch: 9 [2313920/82468 (86%)]	Loss: 0.222445
+Train epoch: 9 [2638560/82468 (99%)]	Loss: 0.262426
+Make prediction for 4124 samples...
+0.019828018 No improvement since epoch  6 ; best_mse,best_ci: 0.019038321 0.5843477712659432 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 10 [0/82468 (0%)]	Loss: 0.201862
+Train epoch: 10 [333720/82468 (12%)]	Loss: 0.218434
+Train epoch: 10 [664600/82468 (25%)]	Loss: 0.400541
+Train epoch: 10 [1006140/82468 (37%)]	Loss: 0.206616
+Train epoch: 10 [1326080/82468 (49%)]	Loss: 0.220865
+Train epoch: 10 [1661200/82468 (62%)]	Loss: 0.216784
+Train epoch: 10 [1967640/82468 (74%)]	Loss: 0.199976
+Train epoch: 10 [2254140/82468 (86%)]	Loss: 0.209651
+Train epoch: 10 [2669600/82468 (99%)]	Loss: 0.209424
+Make prediction for 4124 samples...
+0.021760188 No improvement since epoch  6 ; best_mse,best_ci: 0.019038321 0.5843477712659432 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 11 [0/82468 (0%)]	Loss: 0.203533
+Train epoch: 11 [330140/82468 (12%)]	Loss: 0.257733
+Train epoch: 11 [660760/82468 (25%)]	Loss: 0.206954
+Train epoch: 11 [976800/82468 (37%)]	Loss: 0.185096
+Train epoch: 11 [1331200/82468 (49%)]	Loss: 0.377851
+Train epoch: 11 [1661400/82468 (62%)]	Loss: 0.275156
+Train epoch: 11 [1929720/82468 (74%)]	Loss: 0.208588
+Train epoch: 11 [2300200/82468 (86%)]	Loss: 0.199653
+Train epoch: 11 [2647360/82468 (99%)]	Loss: 0.229391
+Make prediction for 4124 samples...
+0.13053939 No improvement since epoch  6 ; best_mse,best_ci: 0.019038321 0.5843477712659432 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 12 [0/82468 (0%)]	Loss: 0.257627
+Train epoch: 12 [330200/82468 (12%)]	Loss: 0.195905
+Train epoch: 12 [664000/82468 (25%)]	Loss: 0.205253
+Train epoch: 12 [1009860/82468 (37%)]	Loss: 0.199473
+Train epoch: 12 [1328080/82468 (49%)]	Loss: 0.215496
+Train epoch: 12 [1661500/82468 (62%)]	Loss: 0.217662
+Train epoch: 12 [1948920/82468 (74%)]	Loss: 0.210703
+Train epoch: 12 [2292360/82468 (86%)]	Loss: 0.222179
+Train epoch: 12 [2645280/82468 (99%)]	Loss: 0.248778
+Make prediction for 4124 samples...
+0.0691596 No improvement since epoch  6 ; best_mse,best_ci: 0.019038321 0.5843477712659432 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 13 [0/82468 (0%)]	Loss: 0.315602
+Train epoch: 13 [328860/82468 (12%)]	Loss: 0.217093
+Train epoch: 13 [663880/82468 (25%)]	Loss: 0.181201
+Train epoch: 13 [995220/82468 (37%)]	Loss: 0.211133
+Train epoch: 13 [1318640/82468 (49%)]	Loss: 0.232235
+Train epoch: 13 [1648700/82468 (62%)]	Loss: 0.209842
+Train epoch: 13 [1998600/82468 (74%)]	Loss: 0.211431
+Train epoch: 13 [2297680/82468 (86%)]	Loss: 0.178909
+Train epoch: 13 [2648800/82468 (99%)]	Loss: 0.227720
+Make prediction for 4124 samples...
+rmse improved at epoch  13 ; best_mse,best_ci: 0.015821967 0.6153691849945061 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 14 [0/82468 (0%)]	Loss: 0.225383
+Train epoch: 14 [329720/82468 (12%)]	Loss: 0.259584
+Train epoch: 14 [661240/82468 (25%)]	Loss: 0.222246
+Train epoch: 14 [997920/82468 (37%)]	Loss: 0.222373
+Train epoch: 14 [1311920/82468 (49%)]	Loss: 0.211670
+Train epoch: 14 [1643300/82468 (62%)]	Loss: 0.180118
+Train epoch: 14 [2004360/82468 (74%)]	Loss: 0.217665
+Train epoch: 14 [2308040/82468 (86%)]	Loss: 0.248407
+Train epoch: 14 [2590080/82468 (99%)]	Loss: 0.228070
+Make prediction for 4124 samples...
+rmse improved at epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 15 [0/82468 (0%)]	Loss: 0.189174
+Train epoch: 15 [330120/82468 (12%)]	Loss: 0.209341
+Train epoch: 15 [658960/82468 (25%)]	Loss: 0.198010
+Train epoch: 15 [982680/82468 (37%)]	Loss: 0.268932
+Train epoch: 15 [1322880/82468 (49%)]	Loss: 0.195586
+Train epoch: 15 [1665400/82468 (62%)]	Loss: 0.212457
+Train epoch: 15 [2003160/82468 (74%)]	Loss: 0.184142
+Train epoch: 15 [2316440/82468 (86%)]	Loss: 0.171483
+Train epoch: 15 [2638720/82468 (99%)]	Loss: 0.210848
+Make prediction for 4124 samples...
+0.07664857 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 16 [0/82468 (0%)]	Loss: 0.242329
+Train epoch: 16 [333100/82468 (12%)]	Loss: 0.214121
+Train epoch: 16 [656760/82468 (25%)]	Loss: 0.176326
+Train epoch: 16 [978480/82468 (37%)]	Loss: 0.195639
+Train epoch: 16 [1308400/82468 (49%)]	Loss: 0.180767
+Train epoch: 16 [1628900/82468 (62%)]	Loss: 0.190314
+Train epoch: 16 [1981080/82468 (74%)]	Loss: 0.180625
+Train epoch: 16 [2269120/82468 (86%)]	Loss: 0.185560
+Train epoch: 16 [2617280/82468 (99%)]	Loss: 0.196837
+Make prediction for 4124 samples...
+0.0073957117 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 17 [0/82468 (0%)]	Loss: 0.195481
+Train epoch: 17 [331900/82468 (12%)]	Loss: 0.205027
+Train epoch: 17 [657560/82468 (25%)]	Loss: 0.203246
+Train epoch: 17 [999900/82468 (37%)]	Loss: 0.165363
+Train epoch: 17 [1310800/82468 (49%)]	Loss: 0.371665
+Train epoch: 17 [1635600/82468 (62%)]	Loss: 0.251681
+Train epoch: 17 [1983240/82468 (74%)]	Loss: 0.224175
+Train epoch: 17 [2306360/82468 (86%)]	Loss: 0.200112
+Train epoch: 17 [2638720/82468 (99%)]	Loss: 0.198775
+Make prediction for 4124 samples...
+0.016435426 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 18 [0/82468 (0%)]	Loss: 0.214195
+Train epoch: 18 [334320/82468 (12%)]	Loss: 0.190879
+Train epoch: 18 [665160/82468 (25%)]	Loss: 0.220582
+Train epoch: 18 [991440/82468 (37%)]	Loss: 0.182934
+Train epoch: 18 [1326960/82468 (49%)]	Loss: 0.186234
+Train epoch: 18 [1634100/82468 (62%)]	Loss: 0.194601
+Train epoch: 18 [1953480/82468 (74%)]	Loss: 0.183129
+Train epoch: 18 [2291100/82468 (86%)]	Loss: 0.188792
+Train epoch: 18 [2649920/82468 (99%)]	Loss: 0.219517
+Make prediction for 4124 samples...
+0.009679268 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 19 [0/82468 (0%)]	Loss: 0.181908
+Train epoch: 19 [330020/82468 (12%)]	Loss: 0.171883
+Train epoch: 19 [653080/82468 (25%)]	Loss: 0.177689
+Train epoch: 19 [988740/82468 (37%)]	Loss: 0.188251
+Train epoch: 19 [1313920/82468 (49%)]	Loss: 0.215654
+Train epoch: 19 [1656800/82468 (62%)]	Loss: 0.211920
+Train epoch: 19 [1978320/82468 (74%)]	Loss: 0.197362
+Train epoch: 19 [2303280/82468 (86%)]	Loss: 0.221026
+Train epoch: 19 [2653760/82468 (99%)]	Loss: 0.230320
+Make prediction for 4124 samples...
+0.46319872 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 20 [0/82468 (0%)]	Loss: 0.578819
+Train epoch: 20 [328520/82468 (12%)]	Loss: 0.261447
+Train epoch: 20 [652600/82468 (25%)]	Loss: 0.215551
+Train epoch: 20 [997440/82468 (37%)]	Loss: 0.199837
+Train epoch: 20 [1309120/82468 (49%)]	Loss: 0.192813
+Train epoch: 20 [1640700/82468 (62%)]	Loss: 0.174865
+Train epoch: 20 [1966440/82468 (74%)]	Loss: 0.176986
+Train epoch: 20 [2356060/82468 (86%)]	Loss: 0.175548
+Train epoch: 20 [2581280/82468 (99%)]	Loss: 0.204876
+Make prediction for 4124 samples...
+0.042102788 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 21 [0/82468 (0%)]	Loss: 0.235436
+Train epoch: 21 [331360/82468 (12%)]	Loss: 0.175921
+Train epoch: 21 [659960/82468 (25%)]	Loss: 0.179225
+Train epoch: 21 [995640/82468 (37%)]	Loss: 0.167498
+Train epoch: 21 [1317440/82468 (49%)]	Loss: 0.207609
+Train epoch: 21 [1654200/82468 (62%)]	Loss: 0.209149
+Train epoch: 21 [1983360/82468 (74%)]	Loss: 0.167448
+Train epoch: 21 [2304540/82468 (86%)]	Loss: 0.182345
+Train epoch: 21 [2632640/82468 (99%)]	Loss: 0.197038
+Make prediction for 4124 samples...
+0.013987524 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 22 [0/82468 (0%)]	Loss: 0.199739
+Train epoch: 22 [329460/82468 (12%)]	Loss: 0.195664
+Train epoch: 22 [663240/82468 (25%)]	Loss: 0.184042
+Train epoch: 22 [967620/82468 (37%)]	Loss: 0.233021
+Train epoch: 22 [1315680/82468 (49%)]	Loss: 0.168188
+Train epoch: 22 [1670100/82468 (62%)]	Loss: 0.192638
+Train epoch: 22 [1988160/82468 (74%)]	Loss: 0.172637
+Train epoch: 22 [2341640/82468 (86%)]	Loss: 0.184467
+Train epoch: 22 [2648800/82468 (99%)]	Loss: 0.177113
+Make prediction for 4124 samples...
+0.011671271 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 23 [0/82468 (0%)]	Loss: 0.180572
+Train epoch: 23 [330540/82468 (12%)]	Loss: 0.237033
+Train epoch: 23 [654120/82468 (25%)]	Loss: 0.172297
+Train epoch: 23 [986880/82468 (37%)]	Loss: 0.221991
+Train epoch: 23 [1317600/82468 (49%)]	Loss: 0.252616
+Train epoch: 23 [1636700/82468 (62%)]	Loss: 0.203333
+Train epoch: 23 [1985280/82468 (74%)]	Loss: 0.245010
+Train epoch: 23 [2302020/82468 (86%)]	Loss: 0.197445
+Train epoch: 23 [2631040/82468 (99%)]	Loss: 0.180788
+Make prediction for 4124 samples...
+0.024064885 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 24 [0/82468 (0%)]	Loss: 0.202432
+Train epoch: 24 [327400/82468 (12%)]	Loss: 0.192599
+Train epoch: 24 [667600/82468 (25%)]	Loss: 0.164103
+Train epoch: 24 [984540/82468 (37%)]	Loss: 0.203981
+Train epoch: 24 [1314960/82468 (49%)]	Loss: 0.186532
+Train epoch: 24 [1663200/82468 (62%)]	Loss: 0.173239
+Train epoch: 24 [1990440/82468 (74%)]	Loss: 0.306359
+Train epoch: 24 [2298800/82468 (86%)]	Loss: 0.165561
+Train epoch: 24 [2652160/82468 (99%)]	Loss: 0.191486
+Make prediction for 4124 samples...
+0.012169242 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 25 [0/82468 (0%)]	Loss: 0.167311
+Train epoch: 25 [329540/82468 (12%)]	Loss: 0.194994
+Train epoch: 25 [656360/82468 (25%)]	Loss: 0.177339
+Train epoch: 25 [984060/82468 (37%)]	Loss: 0.184034
+Train epoch: 25 [1316560/82468 (49%)]	Loss: 0.214746
+Train epoch: 25 [1678800/82468 (62%)]	Loss: 0.170935
+Train epoch: 25 [1962720/82468 (74%)]	Loss: 0.153606
+Train epoch: 25 [2307900/82468 (86%)]	Loss: 0.185523
+Train epoch: 25 [2635520/82468 (99%)]	Loss: 0.172272
+Make prediction for 4124 samples...
+0.18827997 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 26 [0/82468 (0%)]	Loss: 0.358131
+Train epoch: 26 [323600/82468 (12%)]	Loss: 0.160510
+Train epoch: 26 [663840/82468 (25%)]	Loss: 0.190241
+Train epoch: 26 [997080/82468 (37%)]	Loss: 0.191048
+Train epoch: 26 [1324080/82468 (49%)]	Loss: 0.197667
+Train epoch: 26 [1640000/82468 (62%)]	Loss: 0.170485
+Train epoch: 26 [1971600/82468 (74%)]	Loss: 0.181799
+Train epoch: 26 [2296840/82468 (86%)]	Loss: 0.187846
+Train epoch: 26 [2634400/82468 (99%)]	Loss: 0.202777
+Make prediction for 4124 samples...
+0.016311076 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 27 [0/82468 (0%)]	Loss: 0.176927
+Train epoch: 27 [327440/82468 (12%)]	Loss: 0.174503
+Train epoch: 27 [662640/82468 (25%)]	Loss: 0.170123
+Train epoch: 27 [974100/82468 (37%)]	Loss: 0.182180
+Train epoch: 27 [1312320/82468 (49%)]	Loss: 0.175517
+Train epoch: 27 [1658700/82468 (62%)]	Loss: 0.178680
+Train epoch: 27 [1995720/82468 (74%)]	Loss: 0.175518
+Train epoch: 27 [2264500/82468 (86%)]	Loss: 0.174716
+Train epoch: 27 [2587840/82468 (99%)]	Loss: 0.181128
+Make prediction for 4124 samples...
+0.013366928 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 28 [0/82468 (0%)]	Loss: 0.172448
+Train epoch: 28 [325020/82468 (12%)]	Loss: 0.176060
+Train epoch: 28 [670440/82468 (25%)]	Loss: 0.174026
+Train epoch: 28 [990240/82468 (37%)]	Loss: 0.174096
+Train epoch: 28 [1316640/82468 (49%)]	Loss: 0.188378
+Train epoch: 28 [1650400/82468 (62%)]	Loss: 0.185183
+Train epoch: 28 [1967040/82468 (74%)]	Loss: 0.265863
+Train epoch: 28 [2332120/82468 (86%)]	Loss: 0.181079
+Train epoch: 28 [2651520/82468 (99%)]	Loss: 0.158312
+Make prediction for 4124 samples...
+0.031270288 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 29 [0/82468 (0%)]	Loss: 0.199727
+Train epoch: 29 [327860/82468 (12%)]	Loss: 0.203894
+Train epoch: 29 [662960/82468 (25%)]	Loss: 0.169674
+Train epoch: 29 [981600/82468 (37%)]	Loss: 0.197528
+Train epoch: 29 [1324960/82468 (49%)]	Loss: 0.182112
+Train epoch: 29 [1632500/82468 (62%)]	Loss: 0.181523
+Train epoch: 29 [1991760/82468 (74%)]	Loss: 0.177245
+Train epoch: 29 [2307200/82468 (86%)]	Loss: 0.162887
+Train epoch: 29 [2621600/82468 (99%)]	Loss: 0.177134
+Make prediction for 4124 samples...
+0.019856172 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 30 [0/82468 (0%)]	Loss: 0.168799
+Train epoch: 30 [332980/82468 (12%)]	Loss: 0.213570
+Train epoch: 30 [654360/82468 (25%)]	Loss: 0.254259
+Train epoch: 30 [997080/82468 (37%)]	Loss: 0.193078
+Train epoch: 30 [1315600/82468 (49%)]	Loss: 0.177171
+Train epoch: 30 [1633200/82468 (62%)]	Loss: 0.230898
+Train epoch: 30 [1969920/82468 (74%)]	Loss: 0.183355
+Train epoch: 30 [2308600/82468 (86%)]	Loss: 0.179552
+Train epoch: 30 [2608320/82468 (99%)]	Loss: 0.209377
+Make prediction for 4124 samples...
+0.04214621 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 31 [0/82468 (0%)]	Loss: 0.187825
+Train epoch: 31 [327940/82468 (12%)]	Loss: 0.237058
+Train epoch: 31 [665040/82468 (25%)]	Loss: 0.184025
+Train epoch: 31 [1003620/82468 (37%)]	Loss: 0.229118
+Train epoch: 31 [1314880/82468 (49%)]	Loss: 0.167448
+Train epoch: 31 [1652800/82468 (62%)]	Loss: 0.162281
+Train epoch: 31 [1980120/82468 (74%)]	Loss: 0.185373
+Train epoch: 31 [2312940/82468 (86%)]	Loss: 0.201646
+Train epoch: 31 [2582240/82468 (99%)]	Loss: 0.181162
+Make prediction for 4124 samples...
+0.06973512 No improvement since epoch  14 ; best_mse,best_ci: 0.00681098 0.6261100276248069 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 32 [0/82468 (0%)]	Loss: 0.232118
+Train epoch: 32 [328560/82468 (12%)]	Loss: 0.187976
+Train epoch: 32 [662400/82468 (25%)]	Loss: 0.170105
+Train epoch: 32 [983100/82468 (37%)]	Loss: 0.224935
+Train epoch: 32 [1316480/82468 (49%)]	Loss: 0.177856
+Train epoch: 32 [1627900/82468 (62%)]	Loss: 0.201896
+Train epoch: 32 [2025000/82468 (74%)]	Loss: 0.191442
+Train epoch: 32 [2317840/82468 (86%)]	Loss: 0.173150
+Train epoch: 32 [2629440/82468 (99%)]	Loss: 0.204663
+Make prediction for 4124 samples...
+rmse improved at epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 33 [0/82468 (0%)]	Loss: 0.181574
+Train epoch: 33 [333560/82468 (12%)]	Loss: 0.168487
+Train epoch: 33 [663840/82468 (25%)]	Loss: 0.156330
+Train epoch: 33 [1008000/82468 (37%)]	Loss: 0.198537
+Train epoch: 33 [1316000/82468 (49%)]	Loss: 0.166488
+Train epoch: 33 [1690900/82468 (62%)]	Loss: 0.188320
+Train epoch: 33 [1964040/82468 (74%)]	Loss: 0.166894
+Train epoch: 33 [2329600/82468 (86%)]	Loss: 0.183511
+Train epoch: 33 [2653440/82468 (99%)]	Loss: 0.223557
+Make prediction for 4124 samples...
+0.015069548 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 34 [0/82468 (0%)]	Loss: 0.192779
+Train epoch: 34 [329520/82468 (12%)]	Loss: 0.239259
+Train epoch: 34 [658280/82468 (25%)]	Loss: 0.172251
+Train epoch: 34 [996240/82468 (37%)]	Loss: 0.161695
+Train epoch: 34 [1327280/82468 (49%)]	Loss: 0.165381
+Train epoch: 34 [1658900/82468 (62%)]	Loss: 0.181134
+Train epoch: 34 [1980720/82468 (74%)]	Loss: 0.164788
+Train epoch: 34 [2312800/82468 (86%)]	Loss: 0.208375
+Train epoch: 34 [2610560/82468 (99%)]	Loss: 0.169704
+Make prediction for 4124 samples...
+0.025914041 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 35 [0/82468 (0%)]	Loss: 0.198150
+Train epoch: 35 [329500/82468 (12%)]	Loss: 0.167290
+Train epoch: 35 [668240/82468 (25%)]	Loss: 0.180062
+Train epoch: 35 [966960/82468 (37%)]	Loss: 0.170699
+Train epoch: 35 [1307920/82468 (49%)]	Loss: 0.152548
+Train epoch: 35 [1645700/82468 (62%)]	Loss: 0.183610
+Train epoch: 35 [1989240/82468 (74%)]	Loss: 0.177473
+Train epoch: 35 [2305520/82468 (86%)]	Loss: 0.169046
+Train epoch: 35 [2596000/82468 (99%)]	Loss: 0.154958
+Make prediction for 4124 samples...
+0.115924396 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 36 [0/82468 (0%)]	Loss: 0.268499
+Train epoch: 36 [331840/82468 (12%)]	Loss: 0.173077
+Train epoch: 36 [643080/82468 (25%)]	Loss: 0.154463
+Train epoch: 36 [987540/82468 (37%)]	Loss: 0.180583
+Train epoch: 36 [1340240/82468 (49%)]	Loss: 0.177597
+Train epoch: 36 [1660200/82468 (62%)]	Loss: 0.188965
+Train epoch: 36 [1963800/82468 (74%)]	Loss: 0.209271
+Train epoch: 36 [2307200/82468 (86%)]	Loss: 0.177774
+Train epoch: 36 [2622400/82468 (99%)]	Loss: 0.188344
+Make prediction for 4124 samples...
+0.036302015 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 37 [0/82468 (0%)]	Loss: 0.190031
+Train epoch: 37 [328580/82468 (12%)]	Loss: 0.173034
+Train epoch: 37 [649760/82468 (25%)]	Loss: 0.205186
+Train epoch: 37 [1002360/82468 (37%)]	Loss: 0.145415
+Train epoch: 37 [1336960/82468 (49%)]	Loss: 0.166032
+Train epoch: 37 [1660300/82468 (62%)]	Loss: 0.170464
+Train epoch: 37 [1945920/82468 (74%)]	Loss: 0.208049
+Train epoch: 37 [2298940/82468 (86%)]	Loss: 0.185719
+Train epoch: 37 [2648640/82468 (99%)]	Loss: 0.215181
+Make prediction for 4124 samples...
+0.19042122 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 38 [0/82468 (0%)]	Loss: 0.417256
+Train epoch: 38 [324780/82468 (12%)]	Loss: 0.168859
+Train epoch: 38 [657120/82468 (25%)]	Loss: 0.171849
+Train epoch: 38 [972960/82468 (37%)]	Loss: 0.199887
+Train epoch: 38 [1316880/82468 (49%)]	Loss: 0.174782
+Train epoch: 38 [1659200/82468 (62%)]	Loss: 0.173628
+Train epoch: 38 [1969680/82468 (74%)]	Loss: 0.156979
+Train epoch: 38 [2300760/82468 (86%)]	Loss: 0.176345
+Train epoch: 38 [2650080/82468 (99%)]	Loss: 0.164668
+Make prediction for 4124 samples...
+0.028327873 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 39 [0/82468 (0%)]	Loss: 0.152094
+Train epoch: 39 [335320/82468 (12%)]	Loss: 0.159117
+Train epoch: 39 [655120/82468 (25%)]	Loss: 0.156602
+Train epoch: 39 [994920/82468 (37%)]	Loss: 0.170703
+Train epoch: 39 [1316400/82468 (49%)]	Loss: 0.157906
+Train epoch: 39 [1649800/82468 (62%)]	Loss: 0.164501
+Train epoch: 39 [1940040/82468 (74%)]	Loss: 0.165502
+Train epoch: 39 [2291800/82468 (86%)]	Loss: 0.167431
+Train epoch: 39 [2604960/82468 (99%)]	Loss: 0.201985
+Make prediction for 4124 samples...
+0.008158865 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 40 [0/82468 (0%)]	Loss: 0.174714
+Train epoch: 40 [329740/82468 (12%)]	Loss: 0.164444
+Train epoch: 40 [665840/82468 (25%)]	Loss: 0.180946
+Train epoch: 40 [976800/82468 (37%)]	Loss: 0.171663
+Train epoch: 40 [1321120/82468 (49%)]	Loss: 0.142143
+Train epoch: 40 [1646900/82468 (62%)]	Loss: 0.150704
+Train epoch: 40 [1983720/82468 (74%)]	Loss: 0.175103
+Train epoch: 40 [2303000/82468 (86%)]	Loss: 0.204764
+Train epoch: 40 [2659200/82468 (99%)]	Loss: 0.175818
+Make prediction for 4124 samples...
+0.0068695066 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 41 [0/82468 (0%)]	Loss: 0.162806
+Train epoch: 41 [329240/82468 (12%)]	Loss: 0.163187
+Train epoch: 41 [655800/82468 (25%)]	Loss: 0.182754
+Train epoch: 41 [996480/82468 (37%)]	Loss: 0.161211
+Train epoch: 41 [1318160/82468 (49%)]	Loss: 0.174734
+Train epoch: 41 [1634300/82468 (62%)]	Loss: 0.166280
+Train epoch: 41 [1976640/82468 (74%)]	Loss: 0.179068
+Train epoch: 41 [2343180/82468 (86%)]	Loss: 0.217757
+Train epoch: 41 [2622400/82468 (99%)]	Loss: 0.143763
+Make prediction for 4124 samples...
+0.007207609 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 42 [0/82468 (0%)]	Loss: 0.166621
+Train epoch: 42 [332260/82468 (12%)]	Loss: 0.199363
+Train epoch: 42 [660600/82468 (25%)]	Loss: 0.145258
+Train epoch: 42 [995760/82468 (37%)]	Loss: 0.150604
+Train epoch: 42 [1320400/82468 (49%)]	Loss: 0.191173
+Train epoch: 42 [1630100/82468 (62%)]	Loss: 0.175984
+Train epoch: 42 [1984800/82468 (74%)]	Loss: 0.160449
+Train epoch: 42 [2311120/82468 (86%)]	Loss: 0.166246
+Train epoch: 42 [2660320/82468 (99%)]	Loss: 0.155588
+Make prediction for 4124 samples...
+0.029449344 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 43 [0/82468 (0%)]	Loss: 0.162827
+Train epoch: 43 [330880/82468 (12%)]	Loss: 0.201715
+Train epoch: 43 [656240/82468 (25%)]	Loss: 0.177760
+Train epoch: 43 [991680/82468 (37%)]	Loss: 0.155921
+Train epoch: 43 [1316720/82468 (49%)]	Loss: 0.178231
+Train epoch: 43 [1627800/82468 (62%)]	Loss: 0.157397
+Train epoch: 43 [1970280/82468 (74%)]	Loss: 0.171080
+Train epoch: 43 [2289980/82468 (86%)]	Loss: 0.165590
+Train epoch: 43 [2615200/82468 (99%)]	Loss: 0.180125
+Make prediction for 4124 samples...
+0.005818442 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 44 [0/82468 (0%)]	Loss: 0.159075
+Train epoch: 44 [328620/82468 (12%)]	Loss: 0.171388
+Train epoch: 44 [659640/82468 (25%)]	Loss: 0.175219
+Train epoch: 44 [979920/82468 (37%)]	Loss: 0.167750
+Train epoch: 44 [1328560/82468 (49%)]	Loss: 0.163552
+Train epoch: 44 [1642900/82468 (62%)]	Loss: 0.159090
+Train epoch: 44 [1985880/82468 (74%)]	Loss: 0.215532
+Train epoch: 44 [2299500/82468 (86%)]	Loss: 0.188409
+Train epoch: 44 [2634400/82468 (99%)]	Loss: 0.235814
+Make prediction for 4124 samples...
+0.017952463 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 45 [0/82468 (0%)]	Loss: 0.165462
+Train epoch: 45 [328660/82468 (12%)]	Loss: 0.175926
+Train epoch: 45 [669560/82468 (25%)]	Loss: 0.187723
+Train epoch: 45 [991800/82468 (37%)]	Loss: 0.194452
+Train epoch: 45 [1314000/82468 (49%)]	Loss: 0.174986
+Train epoch: 45 [1640900/82468 (62%)]	Loss: 0.174279
+Train epoch: 45 [1979520/82468 (74%)]	Loss: 0.150050
+Train epoch: 45 [2280040/82468 (86%)]	Loss: 0.171870
+Train epoch: 45 [2653280/82468 (99%)]	Loss: 0.224585
+Make prediction for 4124 samples...
+0.0055361753 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 46 [0/82468 (0%)]	Loss: 0.157292
+Train epoch: 46 [329940/82468 (12%)]	Loss: 0.149026
+Train epoch: 46 [657720/82468 (25%)]	Loss: 0.163800
+Train epoch: 46 [982260/82468 (37%)]	Loss: 0.171203
+Train epoch: 46 [1309280/82468 (49%)]	Loss: 0.172130
+Train epoch: 46 [1657400/82468 (62%)]	Loss: 0.196761
+Train epoch: 46 [2001480/82468 (74%)]	Loss: 0.193012
+Train epoch: 46 [2276120/82468 (86%)]	Loss: 0.173180
+Train epoch: 46 [2628000/82468 (99%)]	Loss: 0.162097
+Make prediction for 4124 samples...
+0.007525392 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 47 [0/82468 (0%)]	Loss: 0.157405
+Train epoch: 47 [326980/82468 (12%)]	Loss: 0.162145
+Train epoch: 47 [653520/82468 (25%)]	Loss: 0.203774
+Train epoch: 47 [990000/82468 (37%)]	Loss: 0.157800
+Train epoch: 47 [1314000/82468 (49%)]	Loss: 0.218573
+Train epoch: 47 [1633100/82468 (62%)]	Loss: 0.274329
+Train epoch: 47 [1986600/82468 (74%)]	Loss: 0.174859
+Train epoch: 47 [2338980/82468 (86%)]	Loss: 0.175720
+Train epoch: 47 [2651360/82468 (99%)]	Loss: 0.156455
+Make prediction for 4124 samples...
+0.08421048 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 48 [0/82468 (0%)]	Loss: 0.231374
+Train epoch: 48 [332580/82468 (12%)]	Loss: 0.176543
+Train epoch: 48 [659960/82468 (25%)]	Loss: 0.150215
+Train epoch: 48 [986400/82468 (37%)]	Loss: 0.165073
+Train epoch: 48 [1304080/82468 (49%)]	Loss: 0.167690
+Train epoch: 48 [1631100/82468 (62%)]	Loss: 0.178848
+Train epoch: 48 [2018760/82468 (74%)]	Loss: 0.218805
+Train epoch: 48 [2310280/82468 (86%)]	Loss: 0.169977
+Train epoch: 48 [2631200/82468 (99%)]	Loss: 0.165737
+Make prediction for 4124 samples...
+0.018648567 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 49 [0/82468 (0%)]	Loss: 0.178647
+Train epoch: 49 [335960/82468 (12%)]	Loss: 0.167142
+Train epoch: 49 [656000/82468 (25%)]	Loss: 0.172012
+Train epoch: 49 [978900/82468 (37%)]	Loss: 0.169406
+Train epoch: 49 [1317600/82468 (49%)]	Loss: 0.207742
+Train epoch: 49 [1653100/82468 (62%)]	Loss: 0.164350
+Train epoch: 49 [1961760/82468 (74%)]	Loss: 0.174177
+Train epoch: 49 [2315320/82468 (86%)]	Loss: 0.153420
+Train epoch: 49 [2632000/82468 (99%)]	Loss: 0.174483
+Make prediction for 4124 samples...
+0.037664283 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 50 [0/82468 (0%)]	Loss: 0.206063
+Train epoch: 50 [331640/82468 (12%)]	Loss: 0.163465
+Train epoch: 50 [659080/82468 (25%)]	Loss: 0.180693
+Train epoch: 50 [985200/82468 (37%)]	Loss: 0.149614
+Train epoch: 50 [1312160/82468 (49%)]	Loss: 0.159757
+Train epoch: 50 [1665700/82468 (62%)]	Loss: 0.167497
+Train epoch: 50 [2009280/82468 (74%)]	Loss: 0.162694
+Train epoch: 50 [2283400/82468 (86%)]	Loss: 0.180357
+Train epoch: 50 [2633280/82468 (99%)]	Loss: 0.150492
+Make prediction for 4124 samples...
+0.012328718 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 51 [0/82468 (0%)]	Loss: 0.145077
+Train epoch: 51 [330640/82468 (12%)]	Loss: 0.181418
+Train epoch: 51 [653840/82468 (25%)]	Loss: 0.186777
+Train epoch: 51 [995160/82468 (37%)]	Loss: 0.183435
+Train epoch: 51 [1318240/82468 (49%)]	Loss: 0.162862
+Train epoch: 51 [1636700/82468 (62%)]	Loss: 0.187445
+Train epoch: 51 [1970640/82468 (74%)]	Loss: 0.184173
+Train epoch: 51 [2327640/82468 (86%)]	Loss: 0.158375
+Train epoch: 51 [2652000/82468 (99%)]	Loss: 0.176207
+Make prediction for 4124 samples...
+0.0107682375 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 52 [0/82468 (0%)]	Loss: 0.161291
+Train epoch: 52 [327380/82468 (12%)]	Loss: 0.147870
+Train epoch: 52 [654320/82468 (25%)]	Loss: 0.152276
+Train epoch: 52 [992520/82468 (37%)]	Loss: 0.160230
+Train epoch: 52 [1337280/82468 (49%)]	Loss: 0.189714
+Train epoch: 52 [1639300/82468 (62%)]	Loss: 0.205892
+Train epoch: 52 [1990080/82468 (74%)]	Loss: 0.147103
+Train epoch: 52 [2306360/82468 (86%)]	Loss: 0.208023
+Train epoch: 52 [2623520/82468 (99%)]	Loss: 0.161802
+Make prediction for 4124 samples...
+0.0066272877 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 53 [0/82468 (0%)]	Loss: 0.149241
+Train epoch: 53 [326140/82468 (12%)]	Loss: 0.157052
+Train epoch: 53 [664760/82468 (25%)]	Loss: 0.169079
+Train epoch: 53 [1000140/82468 (37%)]	Loss: 0.154979
+Train epoch: 53 [1324400/82468 (49%)]	Loss: 0.159908
+Train epoch: 53 [1638600/82468 (62%)]	Loss: 0.176860
+Train epoch: 53 [2003160/82468 (74%)]	Loss: 0.164529
+Train epoch: 53 [2305520/82468 (86%)]	Loss: 0.161398
+Train epoch: 53 [2661120/82468 (99%)]	Loss: 0.219130
+Make prediction for 4124 samples...
+0.11812936 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 54 [0/82468 (0%)]	Loss: 0.288623
+Train epoch: 54 [329080/82468 (12%)]	Loss: 0.181413
+Train epoch: 54 [655200/82468 (25%)]	Loss: 0.171778
+Train epoch: 54 [986100/82468 (37%)]	Loss: 0.153686
+Train epoch: 54 [1336720/82468 (49%)]	Loss: 0.153710
+Train epoch: 54 [1621400/82468 (62%)]	Loss: 0.189774
+Train epoch: 54 [1977960/82468 (74%)]	Loss: 0.154697
+Train epoch: 54 [2302440/82468 (86%)]	Loss: 0.178953
+Train epoch: 54 [2633280/82468 (99%)]	Loss: 0.227460
+Make prediction for 4124 samples...
+0.009608455 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 55 [0/82468 (0%)]	Loss: 0.156140
+Train epoch: 55 [330720/82468 (12%)]	Loss: 0.147074
+Train epoch: 55 [665920/82468 (25%)]	Loss: 0.159225
+Train epoch: 55 [1002960/82468 (37%)]	Loss: 0.163569
+Train epoch: 55 [1330080/82468 (49%)]	Loss: 0.142894
+Train epoch: 55 [1623200/82468 (62%)]	Loss: 0.167500
+Train epoch: 55 [1977360/82468 (74%)]	Loss: 0.158536
+Train epoch: 55 [2319100/82468 (86%)]	Loss: 0.175327
+Train epoch: 55 [2643360/82468 (99%)]	Loss: 0.157264
+Make prediction for 4124 samples...
+0.010566754 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 56 [0/82468 (0%)]	Loss: 0.152029
+Train epoch: 56 [330000/82468 (12%)]	Loss: 0.173305
+Train epoch: 56 [648720/82468 (25%)]	Loss: 0.149959
+Train epoch: 56 [982380/82468 (37%)]	Loss: 0.156680
+Train epoch: 56 [1323040/82468 (49%)]	Loss: 0.157248
+Train epoch: 56 [1638300/82468 (62%)]	Loss: 0.163231
+Train epoch: 56 [1954320/82468 (74%)]	Loss: 0.164887
+Train epoch: 56 [2317140/82468 (86%)]	Loss: 0.169606
+Train epoch: 56 [2625120/82468 (99%)]	Loss: 0.153834
+Make prediction for 4124 samples...
+0.045118626 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 57 [0/82468 (0%)]	Loss: 0.181693
+Train epoch: 57 [327580/82468 (12%)]	Loss: 0.171280
+Train epoch: 57 [657000/82468 (25%)]	Loss: 0.156244
+Train epoch: 57 [984480/82468 (37%)]	Loss: 0.180152
+Train epoch: 57 [1308960/82468 (49%)]	Loss: 0.154042
+Train epoch: 57 [1670100/82468 (62%)]	Loss: 0.147986
+Train epoch: 57 [1971600/82468 (74%)]	Loss: 0.165204
+Train epoch: 57 [2313640/82468 (86%)]	Loss: 0.198948
+Train epoch: 57 [2596480/82468 (99%)]	Loss: 0.148750
+Make prediction for 4124 samples...
+0.036292527 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 58 [0/82468 (0%)]	Loss: 0.175352
+Train epoch: 58 [331840/82468 (12%)]	Loss: 0.172688
+Train epoch: 58 [649960/82468 (25%)]	Loss: 0.193458
+Train epoch: 58 [994860/82468 (37%)]	Loss: 0.141036
+Train epoch: 58 [1327680/82468 (49%)]	Loss: 0.183637
+Train epoch: 58 [1632400/82468 (62%)]	Loss: 0.147472
+Train epoch: 58 [1979640/82468 (74%)]	Loss: 0.176932
+Train epoch: 58 [2305380/82468 (86%)]	Loss: 0.159914
+Train epoch: 58 [2645600/82468 (99%)]	Loss: 0.159298
+Make prediction for 4124 samples...
+0.03703055 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 59 [0/82468 (0%)]	Loss: 0.195295
+Train epoch: 59 [328020/82468 (12%)]	Loss: 0.160207
+Train epoch: 59 [661280/82468 (25%)]	Loss: 0.167567
+Train epoch: 59 [996420/82468 (37%)]	Loss: 0.153998
+Train epoch: 59 [1310080/82468 (49%)]	Loss: 0.143579
+Train epoch: 59 [1663900/82468 (62%)]	Loss: 0.175661
+Train epoch: 59 [1980480/82468 (74%)]	Loss: 0.160522
+Train epoch: 59 [2297540/82468 (86%)]	Loss: 0.128128
+Train epoch: 59 [2632160/82468 (99%)]	Loss: 0.158613
+Make prediction for 4124 samples...
+0.009621761 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 60 [0/82468 (0%)]	Loss: 0.153209
+Train epoch: 60 [333280/82468 (12%)]	Loss: 0.160822
+Train epoch: 60 [654600/82468 (25%)]	Loss: 0.164690
+Train epoch: 60 [994740/82468 (37%)]	Loss: 0.147932
+Train epoch: 60 [1301920/82468 (49%)]	Loss: 0.154046
+Train epoch: 60 [1666700/82468 (62%)]	Loss: 0.144466
+Train epoch: 60 [1997520/82468 (74%)]	Loss: 0.148728
+Train epoch: 60 [2344020/82468 (86%)]	Loss: 0.155049
+Train epoch: 60 [2626400/82468 (99%)]	Loss: 0.148155
+Make prediction for 4124 samples...
+0.03457246 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 61 [0/82468 (0%)]	Loss: 0.158253
+Train epoch: 61 [329140/82468 (12%)]	Loss: 0.195673
+Train epoch: 61 [664320/82468 (25%)]	Loss: 0.186891
+Train epoch: 61 [987540/82468 (37%)]	Loss: 0.142005
+Train epoch: 61 [1317840/82468 (49%)]	Loss: 0.135930
+Train epoch: 61 [1630500/82468 (62%)]	Loss: 0.147528
+Train epoch: 61 [1967640/82468 (74%)]	Loss: 0.164296
+Train epoch: 61 [2295300/82468 (86%)]	Loss: 0.137035
+Train epoch: 61 [2624320/82468 (99%)]	Loss: 0.165238
+Make prediction for 4124 samples...
+0.046786726 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 62 [0/82468 (0%)]	Loss: 0.197501
+Train epoch: 62 [327140/82468 (12%)]	Loss: 0.164085
+Train epoch: 62 [654360/82468 (25%)]	Loss: 0.152419
+Train epoch: 62 [990120/82468 (37%)]	Loss: 0.166338
+Train epoch: 62 [1329600/82468 (49%)]	Loss: 0.167568
+Train epoch: 62 [1635400/82468 (62%)]	Loss: 0.157752
+Train epoch: 62 [1969920/82468 (74%)]	Loss: 0.156230
+Train epoch: 62 [2323440/82468 (86%)]	Loss: 0.187963
+Train epoch: 62 [2649120/82468 (99%)]	Loss: 0.142102
+Make prediction for 4124 samples...
+0.11969432 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 63 [0/82468 (0%)]	Loss: 0.259864
+Train epoch: 63 [332660/82468 (12%)]	Loss: 0.161217
+Train epoch: 63 [663520/82468 (25%)]	Loss: 0.156893
+Train epoch: 63 [1002660/82468 (37%)]	Loss: 0.136138
+Train epoch: 63 [1311840/82468 (49%)]	Loss: 0.164740
+Train epoch: 63 [1627900/82468 (62%)]	Loss: 0.139842
+Train epoch: 63 [2010000/82468 (74%)]	Loss: 0.170605
+Train epoch: 63 [2302440/82468 (86%)]	Loss: 0.158604
+Train epoch: 63 [2630400/82468 (99%)]	Loss: 0.138418
+Make prediction for 4124 samples...
+0.0051034293 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 64 [0/82468 (0%)]	Loss: 0.164505
+Train epoch: 64 [329940/82468 (12%)]	Loss: 0.169114
+Train epoch: 64 [654920/82468 (25%)]	Loss: 0.139044
+Train epoch: 64 [986640/82468 (37%)]	Loss: 0.168244
+Train epoch: 64 [1324960/82468 (49%)]	Loss: 0.138634
+Train epoch: 64 [1640900/82468 (62%)]	Loss: 0.149003
+Train epoch: 64 [1971840/82468 (74%)]	Loss: 0.147137
+Train epoch: 64 [2259460/82468 (86%)]	Loss: 0.149803
+Train epoch: 64 [2664160/82468 (99%)]	Loss: 0.194723
+Make prediction for 4124 samples...
+0.007892087 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 65 [0/82468 (0%)]	Loss: 0.165521
+Train epoch: 65 [325800/82468 (12%)]	Loss: 0.197466
+Train epoch: 65 [662600/82468 (25%)]	Loss: 0.213240
+Train epoch: 65 [985320/82468 (37%)]	Loss: 0.144228
+Train epoch: 65 [1320960/82468 (49%)]	Loss: 0.187476
+Train epoch: 65 [1633500/82468 (62%)]	Loss: 0.147241
+Train epoch: 65 [1973160/82468 (74%)]	Loss: 0.139551
+Train epoch: 65 [2297680/82468 (86%)]	Loss: 0.183948
+Train epoch: 65 [2679360/82468 (99%)]	Loss: 0.154058
+Make prediction for 4124 samples...
+0.033831943 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 66 [0/82468 (0%)]	Loss: 0.194409
+Train epoch: 66 [327300/82468 (12%)]	Loss: 0.161895
+Train epoch: 66 [655520/82468 (25%)]	Loss: 0.159267
+Train epoch: 66 [998940/82468 (37%)]	Loss: 0.164006
+Train epoch: 66 [1319440/82468 (49%)]	Loss: 0.137950
+Train epoch: 66 [1632500/82468 (62%)]	Loss: 0.146648
+Train epoch: 66 [2005320/82468 (74%)]	Loss: 0.133322
+Train epoch: 66 [2340240/82468 (86%)]	Loss: 0.161763
+Train epoch: 66 [2610560/82468 (99%)]	Loss: 0.147291
+Make prediction for 4124 samples...
+0.06252198 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 67 [0/82468 (0%)]	Loss: 0.184896
+Train epoch: 67 [325460/82468 (12%)]	Loss: 0.137878
+Train epoch: 67 [660240/82468 (25%)]	Loss: 0.137787
+Train epoch: 67 [985020/82468 (37%)]	Loss: 0.138929
+Train epoch: 67 [1321360/82468 (49%)]	Loss: 0.169341
+Train epoch: 67 [1646500/82468 (62%)]	Loss: 0.173441
+Train epoch: 67 [1968960/82468 (74%)]	Loss: 0.141582
+Train epoch: 67 [2330300/82468 (86%)]	Loss: 0.159499
+Train epoch: 67 [2620480/82468 (99%)]	Loss: 0.149133
+Make prediction for 4124 samples...
+0.11780362 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 68 [0/82468 (0%)]	Loss: 0.281183
+Train epoch: 68 [327020/82468 (12%)]	Loss: 0.165297
+Train epoch: 68 [666760/82468 (25%)]	Loss: 0.153129
+Train epoch: 68 [1008600/82468 (37%)]	Loss: 0.165856
+Train epoch: 68 [1320000/82468 (49%)]	Loss: 0.206458
+Train epoch: 68 [1631800/82468 (62%)]	Loss: 0.168196
+Train epoch: 68 [1945680/82468 (74%)]	Loss: 0.148236
+Train epoch: 68 [2282420/82468 (86%)]	Loss: 0.162394
+Train epoch: 68 [2644800/82468 (99%)]	Loss: 0.149543
+Make prediction for 4124 samples...
+0.0063293283 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 69 [0/82468 (0%)]	Loss: 0.150277
+Train epoch: 69 [328940/82468 (12%)]	Loss: 0.212660
+Train epoch: 69 [654960/82468 (25%)]	Loss: 0.152222
+Train epoch: 69 [999180/82468 (37%)]	Loss: 0.130206
+Train epoch: 69 [1328480/82468 (49%)]	Loss: 0.169197
+Train epoch: 69 [1666500/82468 (62%)]	Loss: 0.153210
+Train epoch: 69 [1956360/82468 (74%)]	Loss: 0.159162
+Train epoch: 69 [2312660/82468 (86%)]	Loss: 0.139833
+Train epoch: 69 [2648800/82468 (99%)]	Loss: 0.156610
+Make prediction for 4124 samples...
+0.006010576 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 70 [0/82468 (0%)]	Loss: 0.154367
+Train epoch: 70 [325460/82468 (12%)]	Loss: 0.156289
+Train epoch: 70 [661720/82468 (25%)]	Loss: 0.153185
+Train epoch: 70 [997140/82468 (37%)]	Loss: 0.151486
+Train epoch: 70 [1331360/82468 (49%)]	Loss: 0.161686
+Train epoch: 70 [1660400/82468 (62%)]	Loss: 0.176633
+Train epoch: 70 [2001720/82468 (74%)]	Loss: 0.152777
+Train epoch: 70 [2338000/82468 (86%)]	Loss: 0.139081
+Train epoch: 70 [2615680/82468 (99%)]	Loss: 0.146226
+Make prediction for 4124 samples...
+0.04335258 No improvement since epoch  32 ; best_mse,best_ci: 0.0049297838 0.6448940503228898 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 71 [0/82468 (0%)]	Loss: 0.202572
+Train epoch: 71 [327040/82468 (12%)]	Loss: 0.154006
+Train epoch: 71 [651080/82468 (25%)]	Loss: 0.146288
+Train epoch: 71 [992700/82468 (37%)]	Loss: 0.165109
+Train epoch: 71 [1329280/82468 (49%)]	Loss: 0.148133
+Train epoch: 71 [1636500/82468 (62%)]	Loss: 0.150207
+Train epoch: 71 [1986360/82468 (74%)]	Loss: 0.153732
+Train epoch: 71 [2287320/82468 (86%)]	Loss: 0.171313
+Train epoch: 71 [2602080/82468 (99%)]	Loss: 0.150063
+Make prediction for 4124 samples...
+rmse improved at epoch  71 ; best_mse,best_ci: 0.0048375004 0.6368737954061272 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 72 [0/82468 (0%)]	Loss: 0.155030
+Train epoch: 72 [328640/82468 (12%)]	Loss: 0.155442
+Train epoch: 72 [662040/82468 (25%)]	Loss: 0.149246
+Train epoch: 72 [979560/82468 (37%)]	Loss: 0.141625
+Train epoch: 72 [1325840/82468 (49%)]	Loss: 0.147189
+Train epoch: 72 [1664400/82468 (62%)]	Loss: 0.151820
+Train epoch: 72 [1997160/82468 (74%)]	Loss: 0.149002
+Train epoch: 72 [2323020/82468 (86%)]	Loss: 0.140605
+Train epoch: 72 [2620160/82468 (99%)]	Loss: 0.129729
+Make prediction for 4124 samples...
+0.05614663 No improvement since epoch  71 ; best_mse,best_ci: 0.0048375004 0.6368737954061272 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 73 [0/82468 (0%)]	Loss: 0.176564
+Train epoch: 73 [329060/82468 (12%)]	Loss: 0.174085
+Train epoch: 73 [665160/82468 (25%)]	Loss: 0.157260
+Train epoch: 73 [983940/82468 (37%)]	Loss: 0.151856
+Train epoch: 73 [1316880/82468 (49%)]	Loss: 0.160665
+Train epoch: 73 [1655900/82468 (62%)]	Loss: 0.163847
+Train epoch: 73 [2004600/82468 (74%)]	Loss: 0.192759
+Train epoch: 73 [2302580/82468 (86%)]	Loss: 0.144904
+Train epoch: 73 [2627520/82468 (99%)]	Loss: 0.131414
+Make prediction for 4124 samples...
+0.010793616 No improvement since epoch  71 ; best_mse,best_ci: 0.0048375004 0.6368737954061272 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 74 [0/82468 (0%)]	Loss: 0.152190
+Train epoch: 74 [331660/82468 (12%)]	Loss: 0.148130
+Train epoch: 74 [667400/82468 (25%)]	Loss: 0.190521
+Train epoch: 74 [970080/82468 (37%)]	Loss: 0.155522
+Train epoch: 74 [1305680/82468 (49%)]	Loss: 0.170796
+Train epoch: 74 [1639600/82468 (62%)]	Loss: 0.147650
+Train epoch: 74 [1959360/82468 (74%)]	Loss: 0.159945
+Train epoch: 74 [2306920/82468 (86%)]	Loss: 0.154494
+Train epoch: 74 [2633280/82468 (99%)]	Loss: 0.156729
+Make prediction for 4124 samples...
+0.039582364 No improvement since epoch  71 ; best_mse,best_ci: 0.0048375004 0.6368737954061272 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 75 [0/82468 (0%)]	Loss: 0.154087
+Train epoch: 75 [329040/82468 (12%)]	Loss: 0.171587
+Train epoch: 75 [656960/82468 (25%)]	Loss: 0.133183
+Train epoch: 75 [985500/82468 (37%)]	Loss: 0.134840
+Train epoch: 75 [1323600/82468 (49%)]	Loss: 0.125117
+Train epoch: 75 [1664400/82468 (62%)]	Loss: 0.172241
+Train epoch: 75 [1968240/82468 (74%)]	Loss: 0.142313
+Train epoch: 75 [2250780/82468 (86%)]	Loss: 0.136286
+Train epoch: 75 [2610080/82468 (99%)]	Loss: 0.161494
+Make prediction for 4124 samples...
+0.06706035 No improvement since epoch  71 ; best_mse,best_ci: 0.0048375004 0.6368737954061272 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 76 [0/82468 (0%)]	Loss: 0.202832
+Train epoch: 76 [329020/82468 (12%)]	Loss: 0.148722
+Train epoch: 76 [662520/82468 (25%)]	Loss: 0.137026
+Train epoch: 76 [992160/82468 (37%)]	Loss: 0.155644
+Train epoch: 76 [1328080/82468 (49%)]	Loss: 0.138663
+Train epoch: 76 [1641100/82468 (62%)]	Loss: 0.147865
+Train epoch: 76 [1956360/82468 (74%)]	Loss: 0.152048
+Train epoch: 76 [2312660/82468 (86%)]	Loss: 0.143220
+Train epoch: 76 [2631040/82468 (99%)]	Loss: 0.145420
+Make prediction for 4124 samples...
+0.022549707 No improvement since epoch  71 ; best_mse,best_ci: 0.0048375004 0.6368737954061272 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 77 [0/82468 (0%)]	Loss: 0.153296
+Train epoch: 77 [328040/82468 (12%)]	Loss: 0.128382
+Train epoch: 77 [649840/82468 (25%)]	Loss: 0.154916
+Train epoch: 77 [995700/82468 (37%)]	Loss: 0.152415
+Train epoch: 77 [1322000/82468 (49%)]	Loss: 0.144432
+Train epoch: 77 [1633100/82468 (62%)]	Loss: 0.163624
+Train epoch: 77 [1982520/82468 (74%)]	Loss: 0.129364
+Train epoch: 77 [2327360/82468 (86%)]	Loss: 0.132741
+Train epoch: 77 [2660160/82468 (99%)]	Loss: 0.145016
+Make prediction for 4124 samples...
+rmse improved at epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 78 [0/82468 (0%)]	Loss: 0.143142
+Train epoch: 78 [328000/82468 (12%)]	Loss: 0.138599
+Train epoch: 78 [649120/82468 (25%)]	Loss: 0.170394
+Train epoch: 78 [993900/82468 (37%)]	Loss: 0.149112
+Train epoch: 78 [1315760/82468 (49%)]	Loss: 0.129226
+Train epoch: 78 [1666700/82468 (62%)]	Loss: 0.166531
+Train epoch: 78 [1976280/82468 (74%)]	Loss: 0.141715
+Train epoch: 78 [2306640/82468 (86%)]	Loss: 0.164563
+Train epoch: 78 [2644640/82468 (99%)]	Loss: 0.150594
+Make prediction for 4124 samples...
+0.12492884 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 79 [0/82468 (0%)]	Loss: 0.255190
+Train epoch: 79 [329200/82468 (12%)]	Loss: 0.143571
+Train epoch: 79 [666880/82468 (25%)]	Loss: 0.149178
+Train epoch: 79 [985680/82468 (37%)]	Loss: 0.139316
+Train epoch: 79 [1321120/82468 (49%)]	Loss: 0.142017
+Train epoch: 79 [1641700/82468 (62%)]	Loss: 0.169683
+Train epoch: 79 [1971360/82468 (74%)]	Loss: 0.167976
+Train epoch: 79 [2325960/82468 (86%)]	Loss: 0.160286
+Train epoch: 79 [2680320/82468 (99%)]	Loss: 0.143291
+Make prediction for 4124 samples...
+0.026188701 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 80 [0/82468 (0%)]	Loss: 0.162612
+Train epoch: 80 [321260/82468 (12%)]	Loss: 0.129869
+Train epoch: 80 [658680/82468 (25%)]	Loss: 0.150585
+Train epoch: 80 [989520/82468 (37%)]	Loss: 0.153965
+Train epoch: 80 [1307200/82468 (49%)]	Loss: 0.163066
+Train epoch: 80 [1657000/82468 (62%)]	Loss: 0.144635
+Train epoch: 80 [1953000/82468 (74%)]	Loss: 0.146502
+Train epoch: 80 [2284240/82468 (86%)]	Loss: 0.142022
+Train epoch: 80 [2647520/82468 (99%)]	Loss: 0.139860
+Make prediction for 4124 samples...
+0.016527008 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 81 [0/82468 (0%)]	Loss: 0.152832
+Train epoch: 81 [336700/82468 (12%)]	Loss: 0.183509
+Train epoch: 81 [667400/82468 (25%)]	Loss: 0.148213
+Train epoch: 81 [987720/82468 (37%)]	Loss: 0.140514
+Train epoch: 81 [1321920/82468 (49%)]	Loss: 0.151716
+Train epoch: 81 [1632100/82468 (62%)]	Loss: 0.133234
+Train epoch: 81 [1968840/82468 (74%)]	Loss: 0.186229
+Train epoch: 81 [2306220/82468 (86%)]	Loss: 0.152766
+Train epoch: 81 [2624320/82468 (99%)]	Loss: 0.170562
+Make prediction for 4124 samples...
+0.006000006 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 82 [0/82468 (0%)]	Loss: 0.140712
+Train epoch: 82 [327020/82468 (12%)]	Loss: 0.137877
+Train epoch: 82 [662160/82468 (25%)]	Loss: 0.136222
+Train epoch: 82 [998580/82468 (37%)]	Loss: 0.144995
+Train epoch: 82 [1314160/82468 (49%)]	Loss: 0.148273
+Train epoch: 82 [1638800/82468 (62%)]	Loss: 0.153584
+Train epoch: 82 [1980960/82468 (74%)]	Loss: 0.163630
+Train epoch: 82 [2283260/82468 (86%)]	Loss: 0.150915
+Train epoch: 82 [2632160/82468 (99%)]	Loss: 0.124221
+Make prediction for 4124 samples...
+0.108103745 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 83 [0/82468 (0%)]	Loss: 0.274026
+Train epoch: 83 [334940/82468 (12%)]	Loss: 0.142270
+Train epoch: 83 [647880/82468 (25%)]	Loss: 0.153776
+Train epoch: 83 [991440/82468 (37%)]	Loss: 0.124167
+Train epoch: 83 [1325200/82468 (49%)]	Loss: 0.163559
+Train epoch: 83 [1647800/82468 (62%)]	Loss: 0.139968
+Train epoch: 83 [1955520/82468 (74%)]	Loss: 0.127961
+Train epoch: 83 [2329320/82468 (86%)]	Loss: 0.136553
+Train epoch: 83 [2610560/82468 (99%)]	Loss: 0.165748
+Make prediction for 4124 samples...
+0.005576764 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 84 [0/82468 (0%)]	Loss: 0.136205
+Train epoch: 84 [329080/82468 (12%)]	Loss: 0.128187
+Train epoch: 84 [641440/82468 (25%)]	Loss: 0.135009
+Train epoch: 84 [992280/82468 (37%)]	Loss: 0.151936
+Train epoch: 84 [1313600/82468 (49%)]	Loss: 0.124402
+Train epoch: 84 [1622400/82468 (62%)]	Loss: 0.129722
+Train epoch: 84 [1983240/82468 (74%)]	Loss: 0.148677
+Train epoch: 84 [2311260/82468 (86%)]	Loss: 0.136742
+Train epoch: 84 [2664160/82468 (99%)]	Loss: 0.130623
+Make prediction for 4124 samples...
+0.0682059 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 85 [0/82468 (0%)]	Loss: 0.213489
+Train epoch: 85 [328380/82468 (12%)]	Loss: 0.132020
+Train epoch: 85 [661080/82468 (25%)]	Loss: 0.158049
+Train epoch: 85 [983100/82468 (37%)]	Loss: 0.133612
+Train epoch: 85 [1308560/82468 (49%)]	Loss: 0.160730
+Train epoch: 85 [1657100/82468 (62%)]	Loss: 0.131667
+Train epoch: 85 [1963080/82468 (74%)]	Loss: 0.132209
+Train epoch: 85 [2300900/82468 (86%)]	Loss: 0.147296
+Train epoch: 85 [2634080/82468 (99%)]	Loss: 0.127069
+Make prediction for 4124 samples...
+0.015457592 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 86 [0/82468 (0%)]	Loss: 0.148634
+Train epoch: 86 [333080/82468 (12%)]	Loss: 0.132545
+Train epoch: 86 [657520/82468 (25%)]	Loss: 0.151346
+Train epoch: 86 [994020/82468 (37%)]	Loss: 0.178273
+Train epoch: 86 [1323440/82468 (49%)]	Loss: 0.149984
+Train epoch: 86 [1646100/82468 (62%)]	Loss: 0.146588
+Train epoch: 86 [1959720/82468 (74%)]	Loss: 0.138148
+Train epoch: 86 [2314480/82468 (86%)]	Loss: 0.132445
+Train epoch: 86 [2663360/82468 (99%)]	Loss: 0.135209
+Make prediction for 4124 samples...
+0.045510467 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 87 [0/82468 (0%)]	Loss: 0.175145
+Train epoch: 87 [331220/82468 (12%)]	Loss: 0.142289
+Train epoch: 87 [658840/82468 (25%)]	Loss: 0.137443
+Train epoch: 87 [996000/82468 (37%)]	Loss: 0.135959
+Train epoch: 87 [1310320/82468 (49%)]	Loss: 0.129246
+Train epoch: 87 [1651800/82468 (62%)]	Loss: 0.133099
+Train epoch: 87 [1955640/82468 (74%)]	Loss: 0.162685
+Train epoch: 87 [2312660/82468 (86%)]	Loss: 0.130307
+Train epoch: 87 [2630080/82468 (99%)]	Loss: 0.122707
+Make prediction for 4124 samples...
+0.0061197076 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 88 [0/82468 (0%)]	Loss: 0.145696
+Train epoch: 88 [330740/82468 (12%)]	Loss: 0.190564
+Train epoch: 88 [659680/82468 (25%)]	Loss: 0.162176
+Train epoch: 88 [991140/82468 (37%)]	Loss: 0.132883
+Train epoch: 88 [1310880/82468 (49%)]	Loss: 0.146227
+Train epoch: 88 [1640000/82468 (62%)]	Loss: 0.127851
+Train epoch: 88 [2005200/82468 (74%)]	Loss: 0.147749
+Train epoch: 88 [2314900/82468 (86%)]	Loss: 0.135712
+Train epoch: 88 [2636640/82468 (99%)]	Loss: 0.138613
+Make prediction for 4124 samples...
+0.013971998 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 89 [0/82468 (0%)]	Loss: 0.148043
+Train epoch: 89 [334480/82468 (12%)]	Loss: 0.123205
+Train epoch: 89 [662920/82468 (25%)]	Loss: 0.124459
+Train epoch: 89 [1006380/82468 (37%)]	Loss: 0.158032
+Train epoch: 89 [1315040/82468 (49%)]	Loss: 0.171176
+Train epoch: 89 [1643500/82468 (62%)]	Loss: 0.140501
+Train epoch: 89 [1964520/82468 (74%)]	Loss: 0.133649
+Train epoch: 89 [2341920/82468 (86%)]	Loss: 0.153786
+Train epoch: 89 [2594880/82468 (99%)]	Loss: 0.148492
+Make prediction for 4124 samples...
+0.08470832 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 90 [0/82468 (0%)]	Loss: 0.214078
+Train epoch: 90 [331760/82468 (12%)]	Loss: 0.154496
+Train epoch: 90 [659680/82468 (25%)]	Loss: 0.131264
+Train epoch: 90 [984120/82468 (37%)]	Loss: 0.135946
+Train epoch: 90 [1321600/82468 (49%)]	Loss: 0.155712
+Train epoch: 90 [1631700/82468 (62%)]	Loss: 0.137287
+Train epoch: 90 [1989240/82468 (74%)]	Loss: 0.133992
+Train epoch: 90 [2272760/82468 (86%)]	Loss: 0.124836
+Train epoch: 90 [2657120/82468 (99%)]	Loss: 0.162831
+Make prediction for 4124 samples...
+0.041091647 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 91 [0/82468 (0%)]	Loss: 0.183951
+Train epoch: 91 [333160/82468 (12%)]	Loss: 0.131236
+Train epoch: 91 [662240/82468 (25%)]	Loss: 0.148065
+Train epoch: 91 [975180/82468 (37%)]	Loss: 0.151376
+Train epoch: 91 [1301760/82468 (49%)]	Loss: 0.131041
+Train epoch: 91 [1646800/82468 (62%)]	Loss: 0.128054
+Train epoch: 91 [1967280/82468 (74%)]	Loss: 0.154021
+Train epoch: 91 [2326660/82468 (86%)]	Loss: 0.138539
+Train epoch: 91 [2677280/82468 (99%)]	Loss: 0.124563
+Make prediction for 4124 samples...
+0.08728732 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 92 [0/82468 (0%)]	Loss: 0.212216
+Train epoch: 92 [336320/82468 (12%)]	Loss: 0.133751
+Train epoch: 92 [661440/82468 (25%)]	Loss: 0.138928
+Train epoch: 92 [983220/82468 (37%)]	Loss: 0.121986
+Train epoch: 92 [1316960/82468 (49%)]	Loss: 0.146358
+Train epoch: 92 [1623300/82468 (62%)]	Loss: 0.150230
+Train epoch: 92 [1968840/82468 (74%)]	Loss: 0.157551
+Train epoch: 92 [2332400/82468 (86%)]	Loss: 0.142127
+Train epoch: 92 [2619680/82468 (99%)]	Loss: 0.139220
+Make prediction for 4124 samples...
+0.047770273 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 93 [0/82468 (0%)]	Loss: 0.178091
+Train epoch: 93 [331040/82468 (12%)]	Loss: 0.145934
+Train epoch: 93 [660160/82468 (25%)]	Loss: 0.135277
+Train epoch: 93 [983940/82468 (37%)]	Loss: 0.129890
+Train epoch: 93 [1322720/82468 (49%)]	Loss: 0.128718
+Train epoch: 93 [1640700/82468 (62%)]	Loss: 0.141401
+Train epoch: 93 [1973160/82468 (74%)]	Loss: 0.138404
+Train epoch: 93 [2277940/82468 (86%)]	Loss: 0.131841
+Train epoch: 93 [2649920/82468 (99%)]	Loss: 0.133185
+Make prediction for 4124 samples...
+0.013572496 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 94 [0/82468 (0%)]	Loss: 0.125774
+Train epoch: 94 [328320/82468 (12%)]	Loss: 0.159307
+Train epoch: 94 [657320/82468 (25%)]	Loss: 0.157000
+Train epoch: 94 [988020/82468 (37%)]	Loss: 0.155687
+Train epoch: 94 [1332720/82468 (49%)]	Loss: 0.141762
+Train epoch: 94 [1657400/82468 (62%)]	Loss: 0.152831
+Train epoch: 94 [1969920/82468 (74%)]	Loss: 0.146248
+Train epoch: 94 [2307760/82468 (86%)]	Loss: 0.155357
+Train epoch: 94 [2652000/82468 (99%)]	Loss: 0.132422
+Make prediction for 4124 samples...
+0.030091258 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 95 [0/82468 (0%)]	Loss: 0.148722
+Train epoch: 95 [336600/82468 (12%)]	Loss: 0.151965
+Train epoch: 95 [649880/82468 (25%)]	Loss: 0.149177
+Train epoch: 95 [996300/82468 (37%)]	Loss: 0.146658
+Train epoch: 95 [1341360/82468 (49%)]	Loss: 0.122010
+Train epoch: 95 [1646000/82468 (62%)]	Loss: 0.142037
+Train epoch: 95 [1967640/82468 (74%)]	Loss: 0.138384
+Train epoch: 95 [2291800/82468 (86%)]	Loss: 0.150246
+Train epoch: 95 [2634400/82468 (99%)]	Loss: 0.141368
+Make prediction for 4124 samples...
+0.025327042 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 96 [0/82468 (0%)]	Loss: 0.144808
+Train epoch: 96 [326740/82468 (12%)]	Loss: 0.148400
+Train epoch: 96 [665360/82468 (25%)]	Loss: 0.135204
+Train epoch: 96 [978600/82468 (37%)]	Loss: 0.118217
+Train epoch: 96 [1327680/82468 (49%)]	Loss: 0.129542
+Train epoch: 96 [1643500/82468 (62%)]	Loss: 0.131025
+Train epoch: 96 [2000880/82468 (74%)]	Loss: 0.154680
+Train epoch: 96 [2307340/82468 (86%)]	Loss: 0.150534
+Train epoch: 96 [2627520/82468 (99%)]	Loss: 0.132519
+Make prediction for 4124 samples...
+0.005775963 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 97 [0/82468 (0%)]	Loss: 0.131848
+Train epoch: 97 [328360/82468 (12%)]	Loss: 0.135528
+Train epoch: 97 [656880/82468 (25%)]	Loss: 0.161767
+Train epoch: 97 [980520/82468 (37%)]	Loss: 0.119218
+Train epoch: 97 [1303520/82468 (49%)]	Loss: 0.118397
+Train epoch: 97 [1651800/82468 (62%)]	Loss: 0.160327
+Train epoch: 97 [1959840/82468 (74%)]	Loss: 0.138284
+Train epoch: 97 [2318120/82468 (86%)]	Loss: 0.145832
+Train epoch: 97 [2600480/82468 (99%)]	Loss: 0.127849
+Make prediction for 4124 samples...
+0.007677674 No improvement since epoch  77 ; best_mse,best_ci: 0.0043096147 0.6426419271536952 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 98 [0/82468 (0%)]	Loss: 0.141608
+Train epoch: 98 [327200/82468 (12%)]	Loss: 0.128632
+Train epoch: 98 [662120/82468 (25%)]	Loss: 0.135431
+Train epoch: 98 [988620/82468 (37%)]	Loss: 0.164530
+Train epoch: 98 [1330240/82468 (49%)]	Loss: 0.137347
+Train epoch: 98 [1640400/82468 (62%)]	Loss: 0.143009
+Train epoch: 98 [1952520/82468 (74%)]	Loss: 0.124170
+Train epoch: 98 [2273460/82468 (86%)]	Loss: 0.144817
+Train epoch: 98 [2664160/82468 (99%)]	Loss: 0.168787
+Make prediction for 4124 samples...
+rmse improved at epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 99 [0/82468 (0%)]	Loss: 0.133350
+Train epoch: 99 [327740/82468 (12%)]	Loss: 0.122566
+Train epoch: 99 [652480/82468 (25%)]	Loss: 0.147933
+Train epoch: 99 [997680/82468 (37%)]	Loss: 0.132221
+Train epoch: 99 [1329760/82468 (49%)]	Loss: 0.144433
+Train epoch: 99 [1649400/82468 (62%)]	Loss: 0.130374
+Train epoch: 99 [1993200/82468 (74%)]	Loss: 0.135390
+Train epoch: 99 [2316300/82468 (86%)]	Loss: 0.131698
+Train epoch: 99 [2593280/82468 (99%)]	Loss: 0.138742
+Make prediction for 4124 samples...
+0.004266255 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 100 [0/82468 (0%)]	Loss: 0.121428
+Train epoch: 100 [327840/82468 (12%)]	Loss: 0.164199
+Train epoch: 100 [660320/82468 (25%)]	Loss: 0.132567
+Train epoch: 100 [990540/82468 (37%)]	Loss: 0.168908
+Train epoch: 100 [1332160/82468 (49%)]	Loss: 0.127831
+Train epoch: 100 [1629600/82468 (62%)]	Loss: 0.138210
+Train epoch: 100 [1956000/82468 (74%)]	Loss: 0.143213
+Train epoch: 100 [2299780/82468 (86%)]	Loss: 0.124732
+Train epoch: 100 [2654720/82468 (99%)]	Loss: 0.131509
+Make prediction for 4124 samples...
+0.022044918 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 101 [0/82468 (0%)]	Loss: 0.134696
+Train epoch: 101 [326640/82468 (12%)]	Loss: 0.144910
+Train epoch: 101 [668520/82468 (25%)]	Loss: 0.139501
+Train epoch: 101 [985140/82468 (37%)]	Loss: 0.156814
+Train epoch: 101 [1325760/82468 (49%)]	Loss: 0.129990
+Train epoch: 101 [1626600/82468 (62%)]	Loss: 0.120369
+Train epoch: 101 [1991640/82468 (74%)]	Loss: 0.150806
+Train epoch: 101 [2308320/82468 (86%)]	Loss: 0.133483
+Train epoch: 101 [2712640/82468 (99%)]	Loss: 0.136002
+Make prediction for 4124 samples...
+0.045868702 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 102 [0/82468 (0%)]	Loss: 0.167069
+Train epoch: 102 [331080/82468 (12%)]	Loss: 0.135156
+Train epoch: 102 [658920/82468 (25%)]	Loss: 0.142804
+Train epoch: 102 [993300/82468 (37%)]	Loss: 0.112813
+Train epoch: 102 [1326560/82468 (49%)]	Loss: 0.154150
+Train epoch: 102 [1633200/82468 (62%)]	Loss: 0.136327
+Train epoch: 102 [2004960/82468 (74%)]	Loss: 0.119657
+Train epoch: 102 [2285780/82468 (86%)]	Loss: 0.111460
+Train epoch: 102 [2575200/82468 (99%)]	Loss: 0.128823
+Make prediction for 4124 samples...
+0.007946819 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 103 [0/82468 (0%)]	Loss: 0.140664
+Train epoch: 103 [331320/82468 (12%)]	Loss: 0.146867
+Train epoch: 103 [664480/82468 (25%)]	Loss: 0.145734
+Train epoch: 103 [990720/82468 (37%)]	Loss: 0.118682
+Train epoch: 103 [1310960/82468 (49%)]	Loss: 0.141950
+Train epoch: 103 [1693600/82468 (62%)]	Loss: 0.135963
+Train epoch: 103 [1963200/82468 (74%)]	Loss: 0.129314
+Train epoch: 103 [2287460/82468 (86%)]	Loss: 0.134711
+Train epoch: 103 [2667360/82468 (99%)]	Loss: 0.116218
+Make prediction for 4124 samples...
+0.056222413 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 104 [0/82468 (0%)]	Loss: 0.174357
+Train epoch: 104 [333420/82468 (12%)]	Loss: 0.129295
+Train epoch: 104 [651920/82468 (25%)]	Loss: 0.141470
+Train epoch: 104 [994020/82468 (37%)]	Loss: 0.133197
+Train epoch: 104 [1320240/82468 (49%)]	Loss: 0.151387
+Train epoch: 104 [1643200/82468 (62%)]	Loss: 0.129494
+Train epoch: 104 [1971120/82468 (74%)]	Loss: 0.140865
+Train epoch: 104 [2308040/82468 (86%)]	Loss: 0.126819
+Train epoch: 104 [2615520/82468 (99%)]	Loss: 0.131481
+Make prediction for 4124 samples...
+0.021337645 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 105 [0/82468 (0%)]	Loss: 0.140947
+Train epoch: 105 [332260/82468 (12%)]	Loss: 0.129133
+Train epoch: 105 [659760/82468 (25%)]	Loss: 0.119972
+Train epoch: 105 [1002660/82468 (37%)]	Loss: 0.114077
+Train epoch: 105 [1314080/82468 (49%)]	Loss: 0.115257
+Train epoch: 105 [1655500/82468 (62%)]	Loss: 0.135812
+Train epoch: 105 [2013480/82468 (74%)]	Loss: 0.134133
+Train epoch: 105 [2284800/82468 (86%)]	Loss: 0.144510
+Train epoch: 105 [2626720/82468 (99%)]	Loss: 0.167374
+Make prediction for 4124 samples...
+0.089072615 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 106 [0/82468 (0%)]	Loss: 0.217068
+Train epoch: 106 [329280/82468 (12%)]	Loss: 0.144278
+Train epoch: 106 [657120/82468 (25%)]	Loss: 0.133661
+Train epoch: 106 [978540/82468 (37%)]	Loss: 0.135775
+Train epoch: 106 [1323840/82468 (49%)]	Loss: 0.145534
+Train epoch: 106 [1676700/82468 (62%)]	Loss: 0.115199
+Train epoch: 106 [1966560/82468 (74%)]	Loss: 0.124577
+Train epoch: 106 [2332120/82468 (86%)]	Loss: 0.133719
+Train epoch: 106 [2596800/82468 (99%)]	Loss: 0.156513
+Make prediction for 4124 samples...
+0.018384028 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 107 [0/82468 (0%)]	Loss: 0.130778
+Train epoch: 107 [328340/82468 (12%)]	Loss: 0.140318
+Train epoch: 107 [661360/82468 (25%)]	Loss: 0.135605
+Train epoch: 107 [993480/82468 (37%)]	Loss: 0.136669
+Train epoch: 107 [1310000/82468 (49%)]	Loss: 0.137347
+Train epoch: 107 [1644000/82468 (62%)]	Loss: 0.132719
+Train epoch: 107 [1974120/82468 (74%)]	Loss: 0.128598
+Train epoch: 107 [2358160/82468 (86%)]	Loss: 0.129205
+Train epoch: 107 [2638080/82468 (99%)]	Loss: 0.136310
+Make prediction for 4124 samples...
+0.027109459 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 108 [0/82468 (0%)]	Loss: 0.142657
+Train epoch: 108 [329900/82468 (12%)]	Loss: 0.125310
+Train epoch: 108 [666720/82468 (25%)]	Loss: 0.125064
+Train epoch: 108 [992640/82468 (37%)]	Loss: 0.150818
+Train epoch: 108 [1320080/82468 (49%)]	Loss: 0.131211
+Train epoch: 108 [1650200/82468 (62%)]	Loss: 0.124746
+Train epoch: 108 [2005680/82468 (74%)]	Loss: 0.118332
+Train epoch: 108 [2305660/82468 (86%)]	Loss: 0.114649
+Train epoch: 108 [2664160/82468 (99%)]	Loss: 0.122066
+Make prediction for 4124 samples...
+0.0044088224 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 109 [0/82468 (0%)]	Loss: 0.122800
+Train epoch: 109 [329440/82468 (12%)]	Loss: 0.115886
+Train epoch: 109 [655720/82468 (25%)]	Loss: 0.122692
+Train epoch: 109 [982680/82468 (37%)]	Loss: 0.122491
+Train epoch: 109 [1335920/82468 (49%)]	Loss: 0.119142
+Train epoch: 109 [1661500/82468 (62%)]	Loss: 0.152369
+Train epoch: 109 [1967640/82468 (74%)]	Loss: 0.137291
+Train epoch: 109 [2277660/82468 (86%)]	Loss: 0.133587
+Train epoch: 109 [2620960/82468 (99%)]	Loss: 0.121685
+Make prediction for 4124 samples...
+0.01588571 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 110 [0/82468 (0%)]	Loss: 0.103062
+Train epoch: 110 [322540/82468 (12%)]	Loss: 0.148994
+Train epoch: 110 [661920/82468 (25%)]	Loss: 0.138324
+Train epoch: 110 [993360/82468 (37%)]	Loss: 0.129946
+Train epoch: 110 [1310160/82468 (49%)]	Loss: 0.122702
+Train epoch: 110 [1661200/82468 (62%)]	Loss: 0.119354
+Train epoch: 110 [1980000/82468 (74%)]	Loss: 0.136527
+Train epoch: 110 [2329040/82468 (86%)]	Loss: 0.140840
+Train epoch: 110 [2607680/82468 (99%)]	Loss: 0.112509
+Make prediction for 4124 samples...
+0.006165253 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 111 [0/82468 (0%)]	Loss: 0.124922
+Train epoch: 111 [329220/82468 (12%)]	Loss: 0.118815
+Train epoch: 111 [655200/82468 (25%)]	Loss: 0.120385
+Train epoch: 111 [999780/82468 (37%)]	Loss: 0.118087
+Train epoch: 111 [1321200/82468 (49%)]	Loss: 0.123771
+Train epoch: 111 [1636800/82468 (62%)]	Loss: 0.128331
+Train epoch: 111 [1979400/82468 (74%)]	Loss: 0.147750
+Train epoch: 111 [2337720/82468 (86%)]	Loss: 0.123267
+Train epoch: 111 [2680000/82468 (99%)]	Loss: 0.112573
+Make prediction for 4124 samples...
+0.0195226 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 112 [0/82468 (0%)]	Loss: 0.132894
+Train epoch: 112 [326040/82468 (12%)]	Loss: 0.120410
+Train epoch: 112 [663520/82468 (25%)]	Loss: 0.130143
+Train epoch: 112 [979320/82468 (37%)]	Loss: 0.147899
+Train epoch: 112 [1328320/82468 (49%)]	Loss: 0.131105
+Train epoch: 112 [1644600/82468 (62%)]	Loss: 0.119489
+Train epoch: 112 [1985640/82468 (74%)]	Loss: 0.117516
+Train epoch: 112 [2318680/82468 (86%)]	Loss: 0.131162
+Train epoch: 112 [2632320/82468 (99%)]	Loss: 0.118893
+Make prediction for 4124 samples...
+0.007945073 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 113 [0/82468 (0%)]	Loss: 0.133703
+Train epoch: 113 [325560/82468 (12%)]	Loss: 0.174961
+Train epoch: 113 [649720/82468 (25%)]	Loss: 0.150070
+Train epoch: 113 [996120/82468 (37%)]	Loss: 0.107542
+Train epoch: 113 [1304560/82468 (49%)]	Loss: 0.119410
+Train epoch: 113 [1629100/82468 (62%)]	Loss: 0.122366
+Train epoch: 113 [1971960/82468 (74%)]	Loss: 0.131722
+Train epoch: 113 [2292920/82468 (86%)]	Loss: 0.126160
+Train epoch: 113 [2652320/82468 (99%)]	Loss: 0.124273
+Make prediction for 4124 samples...
+0.030018834 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 114 [0/82468 (0%)]	Loss: 0.147640
+Train epoch: 114 [332580/82468 (12%)]	Loss: 0.118699
+Train epoch: 114 [661640/82468 (25%)]	Loss: 0.121593
+Train epoch: 114 [998400/82468 (37%)]	Loss: 0.136148
+Train epoch: 114 [1308320/82468 (49%)]	Loss: 0.120502
+Train epoch: 114 [1640200/82468 (62%)]	Loss: 0.137804
+Train epoch: 114 [1945680/82468 (74%)]	Loss: 0.120823
+Train epoch: 114 [2273460/82468 (86%)]	Loss: 0.130454
+Train epoch: 114 [2640000/82468 (99%)]	Loss: 0.115715
+Make prediction for 4124 samples...
+0.006169591 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 115 [0/82468 (0%)]	Loss: 0.132689
+Train epoch: 115 [334240/82468 (12%)]	Loss: 0.153357
+Train epoch: 115 [659000/82468 (25%)]	Loss: 0.121801
+Train epoch: 115 [1012440/82468 (37%)]	Loss: 0.122765
+Train epoch: 115 [1320800/82468 (49%)]	Loss: 0.130104
+Train epoch: 115 [1650900/82468 (62%)]	Loss: 0.142403
+Train epoch: 115 [1982640/82468 (74%)]	Loss: 0.140352
+Train epoch: 115 [2301460/82468 (86%)]	Loss: 0.115762
+Train epoch: 115 [2617120/82468 (99%)]	Loss: 0.120393
+Make prediction for 4124 samples...
+0.06507672 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 116 [0/82468 (0%)]	Loss: 0.183170
+Train epoch: 116 [326020/82468 (12%)]	Loss: 0.116901
+Train epoch: 116 [656120/82468 (25%)]	Loss: 0.132156
+Train epoch: 116 [985200/82468 (37%)]	Loss: 0.120325
+Train epoch: 116 [1331920/82468 (49%)]	Loss: 0.147962
+Train epoch: 116 [1656900/82468 (62%)]	Loss: 0.102298
+Train epoch: 116 [1969080/82468 (74%)]	Loss: 0.133108
+Train epoch: 116 [2315880/82468 (86%)]	Loss: 0.135658
+Train epoch: 116 [2649600/82468 (99%)]	Loss: 0.097155
+Make prediction for 4124 samples...
+0.008291021 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 117 [0/82468 (0%)]	Loss: 0.114921
+Train epoch: 117 [326320/82468 (12%)]	Loss: 0.126821
+Train epoch: 117 [658800/82468 (25%)]	Loss: 0.126226
+Train epoch: 117 [976920/82468 (37%)]	Loss: 0.145178
+Train epoch: 117 [1312560/82468 (49%)]	Loss: 0.127771
+Train epoch: 117 [1655000/82468 (62%)]	Loss: 0.151059
+Train epoch: 117 [1984080/82468 (74%)]	Loss: 0.122114
+Train epoch: 117 [2309300/82468 (86%)]	Loss: 0.124412
+Train epoch: 117 [2647680/82468 (99%)]	Loss: 0.157637
+Make prediction for 4124 samples...
+0.02967812 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 118 [0/82468 (0%)]	Loss: 0.141916
+Train epoch: 118 [324320/82468 (12%)]	Loss: 0.122166
+Train epoch: 118 [655280/82468 (25%)]	Loss: 0.122272
+Train epoch: 118 [995460/82468 (37%)]	Loss: 0.112060
+Train epoch: 118 [1329520/82468 (49%)]	Loss: 0.127689
+Train epoch: 118 [1639800/82468 (62%)]	Loss: 0.120212
+Train epoch: 118 [1945080/82468 (74%)]	Loss: 0.117431
+Train epoch: 118 [2314760/82468 (86%)]	Loss: 0.114619
+Train epoch: 118 [2668800/82468 (99%)]	Loss: 0.123884
+Make prediction for 4124 samples...
+0.10885662 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 119 [0/82468 (0%)]	Loss: 0.231296
+Train epoch: 119 [328400/82468 (12%)]	Loss: 0.115275
+Train epoch: 119 [653480/82468 (25%)]	Loss: 0.143610
+Train epoch: 119 [1002300/82468 (37%)]	Loss: 0.111569
+Train epoch: 119 [1314000/82468 (49%)]	Loss: 0.118037
+Train epoch: 119 [1634100/82468 (62%)]	Loss: 0.116087
+Train epoch: 119 [2000520/82468 (74%)]	Loss: 0.120822
+Train epoch: 119 [2296280/82468 (86%)]	Loss: 0.124644
+Train epoch: 119 [2678240/82468 (99%)]	Loss: 0.132309
+Make prediction for 4124 samples...
+0.08313188 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 120 [0/82468 (0%)]	Loss: 0.184893
+Train epoch: 120 [330200/82468 (12%)]	Loss: 0.133739
+Train epoch: 120 [664760/82468 (25%)]	Loss: 0.112225
+Train epoch: 120 [985800/82468 (37%)]	Loss: 0.121673
+Train epoch: 120 [1322160/82468 (49%)]	Loss: 0.128010
+Train epoch: 120 [1641200/82468 (62%)]	Loss: 0.136303
+Train epoch: 120 [1963200/82468 (74%)]	Loss: 0.113959
+Train epoch: 120 [2327780/82468 (86%)]	Loss: 0.123813
+Train epoch: 120 [2641760/82468 (99%)]	Loss: 0.144580
+Make prediction for 4124 samples...
+0.0063635986 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 121 [0/82468 (0%)]	Loss: 0.114568
+Train epoch: 121 [331800/82468 (12%)]	Loss: 0.108297
+Train epoch: 121 [667040/82468 (25%)]	Loss: 0.122937
+Train epoch: 121 [988740/82468 (37%)]	Loss: 0.120242
+Train epoch: 121 [1321600/82468 (49%)]	Loss: 0.120528
+Train epoch: 121 [1636000/82468 (62%)]	Loss: 0.130996
+Train epoch: 121 [1950000/82468 (74%)]	Loss: 0.154733
+Train epoch: 121 [2296140/82468 (86%)]	Loss: 0.129939
+Train epoch: 121 [2628160/82468 (99%)]	Loss: 0.121842
+Make prediction for 4124 samples...
+0.04146654 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 122 [0/82468 (0%)]	Loss: 0.140988
+Train epoch: 122 [330320/82468 (12%)]	Loss: 0.114785
+Train epoch: 122 [659400/82468 (25%)]	Loss: 0.122243
+Train epoch: 122 [989520/82468 (37%)]	Loss: 0.103718
+Train epoch: 122 [1331440/82468 (49%)]	Loss: 0.113116
+Train epoch: 122 [1652800/82468 (62%)]	Loss: 0.119001
+Train epoch: 122 [1984560/82468 (74%)]	Loss: 0.126180
+Train epoch: 122 [2323160/82468 (86%)]	Loss: 0.123203
+Train epoch: 122 [2656640/82468 (99%)]	Loss: 0.112848
+Make prediction for 4124 samples...
+0.04153531 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 123 [0/82468 (0%)]	Loss: 0.156030
+Train epoch: 123 [330460/82468 (12%)]	Loss: 0.112204
+Train epoch: 123 [667040/82468 (25%)]	Loss: 0.113164
+Train epoch: 123 [984840/82468 (37%)]	Loss: 0.109248
+Train epoch: 123 [1307120/82468 (49%)]	Loss: 0.117710
+Train epoch: 123 [1664800/82468 (62%)]	Loss: 0.125403
+Train epoch: 123 [1956240/82468 (74%)]	Loss: 0.124000
+Train epoch: 123 [2303140/82468 (86%)]	Loss: 0.122895
+Train epoch: 123 [2647200/82468 (99%)]	Loss: 0.108224
+Make prediction for 4124 samples...
+0.108604036 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 124 [0/82468 (0%)]	Loss: 0.200889
+Train epoch: 124 [330340/82468 (12%)]	Loss: 0.115201
+Train epoch: 124 [655600/82468 (25%)]	Loss: 0.118071
+Train epoch: 124 [987120/82468 (37%)]	Loss: 0.132644
+Train epoch: 124 [1304240/82468 (49%)]	Loss: 0.108149
+Train epoch: 124 [1632100/82468 (62%)]	Loss: 0.125976
+Train epoch: 124 [1981560/82468 (74%)]	Loss: 0.138262
+Train epoch: 124 [2293760/82468 (86%)]	Loss: 0.123556
+Train epoch: 124 [2655200/82468 (99%)]	Loss: 0.116121
+Make prediction for 4124 samples...
+0.0059377216 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 125 [0/82468 (0%)]	Loss: 0.119077
+Train epoch: 125 [329100/82468 (12%)]	Loss: 0.142457
+Train epoch: 125 [656760/82468 (25%)]	Loss: 0.130368
+Train epoch: 125 [988200/82468 (37%)]	Loss: 0.109650
+Train epoch: 125 [1315760/82468 (49%)]	Loss: 0.108695
+Train epoch: 125 [1656600/82468 (62%)]	Loss: 0.122390
+Train epoch: 125 [1979400/82468 (74%)]	Loss: 0.127064
+Train epoch: 125 [2306780/82468 (86%)]	Loss: 0.109041
+Train epoch: 125 [2622560/82468 (99%)]	Loss: 0.133184
+Make prediction for 4124 samples...
+0.008727125 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 126 [0/82468 (0%)]	Loss: 0.121045
+Train epoch: 126 [331260/82468 (12%)]	Loss: 0.116543
+Train epoch: 126 [652720/82468 (25%)]	Loss: 0.111434
+Train epoch: 126 [1010400/82468 (37%)]	Loss: 0.142624
+Train epoch: 126 [1299280/82468 (49%)]	Loss: 0.110422
+Train epoch: 126 [1654800/82468 (62%)]	Loss: 0.110492
+Train epoch: 126 [1967280/82468 (74%)]	Loss: 0.116681
+Train epoch: 126 [2358860/82468 (86%)]	Loss: 0.129889
+Train epoch: 126 [2667200/82468 (99%)]	Loss: 0.113907
+Make prediction for 4124 samples...
+0.1397426 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 127 [0/82468 (0%)]	Loss: 0.234998
+Train epoch: 127 [332280/82468 (12%)]	Loss: 0.115598
+Train epoch: 127 [659920/82468 (25%)]	Loss: 0.120313
+Train epoch: 127 [991140/82468 (37%)]	Loss: 0.148088
+Train epoch: 127 [1298240/82468 (49%)]	Loss: 0.119496
+Train epoch: 127 [1632600/82468 (62%)]	Loss: 0.113137
+Train epoch: 127 [1959600/82468 (74%)]	Loss: 0.106348
+Train epoch: 127 [2294040/82468 (86%)]	Loss: 0.108413
+Train epoch: 127 [2620000/82468 (99%)]	Loss: 0.110559
+Make prediction for 4124 samples...
+0.038887918 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 128 [0/82468 (0%)]	Loss: 0.160169
+Train epoch: 128 [327920/82468 (12%)]	Loss: 0.107212
+Train epoch: 128 [662040/82468 (25%)]	Loss: 0.138282
+Train epoch: 128 [992160/82468 (37%)]	Loss: 0.119449
+Train epoch: 128 [1319120/82468 (49%)]	Loss: 0.113827
+Train epoch: 128 [1657600/82468 (62%)]	Loss: 0.124285
+Train epoch: 128 [1976280/82468 (74%)]	Loss: 0.109810
+Train epoch: 128 [2262960/82468 (86%)]	Loss: 0.122277
+Train epoch: 128 [2658720/82468 (99%)]	Loss: 0.167013
+Make prediction for 4124 samples...
+0.06029288 No improvement since epoch  98 ; best_mse,best_ci: 0.0039057587 0.6756758416396068 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 129 [0/82468 (0%)]	Loss: 0.196216
+Train epoch: 129 [332320/82468 (12%)]	Loss: 0.108767
+Train epoch: 129 [662280/82468 (25%)]	Loss: 0.105527
+Train epoch: 129 [987900/82468 (37%)]	Loss: 0.116726
+Train epoch: 129 [1326320/82468 (49%)]	Loss: 0.118089
+Train epoch: 129 [1663600/82468 (62%)]	Loss: 0.127207
+Train epoch: 129 [1964880/82468 (74%)]	Loss: 0.112889
+Train epoch: 129 [2309300/82468 (86%)]	Loss: 0.110400
+Train epoch: 129 [2652960/82468 (99%)]	Loss: 0.090962
+Make prediction for 4124 samples...
+rmse improved at epoch  129 ; best_mse,best_ci: 0.003730403 0.6603915888712584 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 130 [0/82468 (0%)]	Loss: 0.114330
+Train epoch: 130 [327560/82468 (12%)]	Loss: 0.129810
+Train epoch: 130 [660880/82468 (25%)]	Loss: 0.134968
+Train epoch: 130 [992220/82468 (37%)]	Loss: 0.128304
+Train epoch: 130 [1326720/82468 (49%)]	Loss: 0.125169
+Train epoch: 130 [1645600/82468 (62%)]	Loss: 0.107702
+Train epoch: 130 [1977120/82468 (74%)]	Loss: 0.105362
+Train epoch: 130 [2301180/82468 (86%)]	Loss: 0.149127
+Train epoch: 130 [2602720/82468 (99%)]	Loss: 0.115805
+Make prediction for 4124 samples...
+rmse improved at epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 131 [0/82468 (0%)]	Loss: 0.103104
+Train epoch: 131 [332300/82468 (12%)]	Loss: 0.105576
+Train epoch: 131 [658960/82468 (25%)]	Loss: 0.118628
+Train epoch: 131 [992640/82468 (37%)]	Loss: 0.107703
+Train epoch: 131 [1299920/82468 (49%)]	Loss: 0.112162
+Train epoch: 131 [1616400/82468 (62%)]	Loss: 0.119311
+Train epoch: 131 [1998720/82468 (74%)]	Loss: 0.124143
+Train epoch: 131 [2338840/82468 (86%)]	Loss: 0.112412
+Train epoch: 131 [2652480/82468 (99%)]	Loss: 0.105782
+Make prediction for 4124 samples...
+0.041380215 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 132 [0/82468 (0%)]	Loss: 0.151675
+Train epoch: 132 [327240/82468 (12%)]	Loss: 0.126706
+Train epoch: 132 [656560/82468 (25%)]	Loss: 0.118669
+Train epoch: 132 [982680/82468 (37%)]	Loss: 0.113892
+Train epoch: 132 [1316640/82468 (49%)]	Loss: 0.106370
+Train epoch: 132 [1653700/82468 (62%)]	Loss: 0.123960
+Train epoch: 132 [1999080/82468 (74%)]	Loss: 0.108880
+Train epoch: 132 [2301320/82468 (86%)]	Loss: 0.140934
+Train epoch: 132 [2647040/82468 (99%)]	Loss: 0.111002
+Make prediction for 4124 samples...
+0.0035835488 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 133 [0/82468 (0%)]	Loss: 0.104943
+Train epoch: 133 [334580/82468 (12%)]	Loss: 0.131408
+Train epoch: 133 [658120/82468 (25%)]	Loss: 0.120893
+Train epoch: 133 [971400/82468 (37%)]	Loss: 0.105550
+Train epoch: 133 [1331760/82468 (49%)]	Loss: 0.111417
+Train epoch: 133 [1638400/82468 (62%)]	Loss: 0.110546
+Train epoch: 133 [1988160/82468 (74%)]	Loss: 0.107855
+Train epoch: 133 [2306780/82468 (86%)]	Loss: 0.110189
+Train epoch: 133 [2620480/82468 (99%)]	Loss: 0.114140
+Make prediction for 4124 samples...
+0.030696968 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 134 [0/82468 (0%)]	Loss: 0.129609
+Train epoch: 134 [333740/82468 (12%)]	Loss: 0.114183
+Train epoch: 134 [651200/82468 (25%)]	Loss: 0.102442
+Train epoch: 134 [988200/82468 (37%)]	Loss: 0.105344
+Train epoch: 134 [1332880/82468 (49%)]	Loss: 0.116621
+Train epoch: 134 [1634000/82468 (62%)]	Loss: 0.125886
+Train epoch: 134 [1977840/82468 (74%)]	Loss: 0.122916
+Train epoch: 134 [2313080/82468 (86%)]	Loss: 0.126688
+Train epoch: 134 [2618560/82468 (99%)]	Loss: 0.107140
+Make prediction for 4124 samples...
+0.003867376 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 135 [0/82468 (0%)]	Loss: 0.100535
+Train epoch: 135 [329980/82468 (12%)]	Loss: 0.130681
+Train epoch: 135 [662880/82468 (25%)]	Loss: 0.114636
+Train epoch: 135 [990600/82468 (37%)]	Loss: 0.104119
+Train epoch: 135 [1320800/82468 (49%)]	Loss: 0.111946
+Train epoch: 135 [1659900/82468 (62%)]	Loss: 0.115073
+Train epoch: 135 [1958640/82468 (74%)]	Loss: 0.122894
+Train epoch: 135 [2301040/82468 (86%)]	Loss: 0.106692
+Train epoch: 135 [2587680/82468 (99%)]	Loss: 0.116424
+Make prediction for 4124 samples...
+0.028448105 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 136 [0/82468 (0%)]	Loss: 0.133370
+Train epoch: 136 [333660/82468 (12%)]	Loss: 0.097373
+Train epoch: 136 [665920/82468 (25%)]	Loss: 0.094497
+Train epoch: 136 [991320/82468 (37%)]	Loss: 0.101281
+Train epoch: 136 [1324960/82468 (49%)]	Loss: 0.113613
+Train epoch: 136 [1653800/82468 (62%)]	Loss: 0.108740
+Train epoch: 136 [1969320/82468 (74%)]	Loss: 0.093840
+Train epoch: 136 [2329460/82468 (86%)]	Loss: 0.115734
+Train epoch: 136 [2641760/82468 (99%)]	Loss: 0.103826
+Make prediction for 4124 samples...
+0.0038167129 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 137 [0/82468 (0%)]	Loss: 0.104149
+Train epoch: 137 [326960/82468 (12%)]	Loss: 0.106754
+Train epoch: 137 [665960/82468 (25%)]	Loss: 0.106826
+Train epoch: 137 [981600/82468 (37%)]	Loss: 0.116426
+Train epoch: 137 [1316160/82468 (49%)]	Loss: 0.123894
+Train epoch: 137 [1632400/82468 (62%)]	Loss: 0.123147
+Train epoch: 137 [1993560/82468 (74%)]	Loss: 0.110651
+Train epoch: 137 [2339540/82468 (86%)]	Loss: 0.144374
+Train epoch: 137 [2609120/82468 (99%)]	Loss: 0.103511
+Make prediction for 4124 samples...
+0.03620038 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 138 [0/82468 (0%)]	Loss: 0.151023
+Train epoch: 138 [327680/82468 (12%)]	Loss: 0.105636
+Train epoch: 138 [653000/82468 (25%)]	Loss: 0.105600
+Train epoch: 138 [986340/82468 (37%)]	Loss: 0.114487
+Train epoch: 138 [1300240/82468 (49%)]	Loss: 0.115336
+Train epoch: 138 [1637000/82468 (62%)]	Loss: 0.104428
+Train epoch: 138 [1967880/82468 (74%)]	Loss: 0.106995
+Train epoch: 138 [2332540/82468 (86%)]	Loss: 0.132512
+Train epoch: 138 [2670560/82468 (99%)]	Loss: 0.107728
+Make prediction for 4124 samples...
+0.0043501784 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 139 [0/82468 (0%)]	Loss: 0.098958
+Train epoch: 139 [333540/82468 (12%)]	Loss: 0.124979
+Train epoch: 139 [660000/82468 (25%)]	Loss: 0.108350
+Train epoch: 139 [973800/82468 (37%)]	Loss: 0.106430
+Train epoch: 139 [1311280/82468 (49%)]	Loss: 0.121436
+Train epoch: 139 [1644200/82468 (62%)]	Loss: 0.099000
+Train epoch: 139 [1956360/82468 (74%)]	Loss: 0.106049
+Train epoch: 139 [2295300/82468 (86%)]	Loss: 0.108638
+Train epoch: 139 [2665120/82468 (99%)]	Loss: 0.098103
+Make prediction for 4124 samples...
+0.008238483 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 140 [0/82468 (0%)]	Loss: 0.091780
+Train epoch: 140 [331700/82468 (12%)]	Loss: 0.106061
+Train epoch: 140 [666760/82468 (25%)]	Loss: 0.104087
+Train epoch: 140 [998340/82468 (37%)]	Loss: 0.107014
+Train epoch: 140 [1319200/82468 (49%)]	Loss: 0.116854
+Train epoch: 140 [1652500/82468 (62%)]	Loss: 0.105661
+Train epoch: 140 [1976640/82468 (74%)]	Loss: 0.114652
+Train epoch: 140 [2309300/82468 (86%)]	Loss: 0.108520
+Train epoch: 140 [2609920/82468 (99%)]	Loss: 0.104720
+Make prediction for 4124 samples...
+0.07145514 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 141 [0/82468 (0%)]	Loss: 0.184425
+Train epoch: 141 [330620/82468 (12%)]	Loss: 0.111263
+Train epoch: 141 [662640/82468 (25%)]	Loss: 0.101092
+Train epoch: 141 [994860/82468 (37%)]	Loss: 0.125309
+Train epoch: 141 [1338240/82468 (49%)]	Loss: 0.106054
+Train epoch: 141 [1636000/82468 (62%)]	Loss: 0.123324
+Train epoch: 141 [1950000/82468 (74%)]	Loss: 0.124008
+Train epoch: 141 [2304260/82468 (86%)]	Loss: 0.105431
+Train epoch: 141 [2642400/82468 (99%)]	Loss: 0.112529
+Make prediction for 4124 samples...
+0.09830897 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 142 [0/82468 (0%)]	Loss: 0.192834
+Train epoch: 142 [329720/82468 (12%)]	Loss: 0.153471
+Train epoch: 142 [664720/82468 (25%)]	Loss: 0.104441
+Train epoch: 142 [986340/82468 (37%)]	Loss: 0.110611
+Train epoch: 142 [1330080/82468 (49%)]	Loss: 0.107566
+Train epoch: 142 [1645700/82468 (62%)]	Loss: 0.095277
+Train epoch: 142 [1956960/82468 (74%)]	Loss: 0.093808
+Train epoch: 142 [2296840/82468 (86%)]	Loss: 0.110690
+Train epoch: 142 [2606560/82468 (99%)]	Loss: 0.108526
+Make prediction for 4124 samples...
+0.0053393156 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 143 [0/82468 (0%)]	Loss: 0.109943
+Train epoch: 143 [328680/82468 (12%)]	Loss: 0.089188
+Train epoch: 143 [655920/82468 (25%)]	Loss: 0.093226
+Train epoch: 143 [983820/82468 (37%)]	Loss: 0.115592
+Train epoch: 143 [1335840/82468 (49%)]	Loss: 0.110965
+Train epoch: 143 [1633300/82468 (62%)]	Loss: 0.112993
+Train epoch: 143 [1959600/82468 (74%)]	Loss: 0.129977
+Train epoch: 143 [2314340/82468 (86%)]	Loss: 0.116118
+Train epoch: 143 [2596800/82468 (99%)]	Loss: 0.109894
+Make prediction for 4124 samples...
+0.031455476 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 144 [0/82468 (0%)]	Loss: 0.133087
+Train epoch: 144 [331940/82468 (12%)]	Loss: 0.117280
+Train epoch: 144 [658760/82468 (25%)]	Loss: 0.110596
+Train epoch: 144 [987360/82468 (37%)]	Loss: 0.127568
+Train epoch: 144 [1342800/82468 (49%)]	Loss: 0.104237
+Train epoch: 144 [1623300/82468 (62%)]	Loss: 0.113153
+Train epoch: 144 [1971600/82468 (74%)]	Loss: 0.103717
+Train epoch: 144 [2272060/82468 (86%)]	Loss: 0.112485
+Train epoch: 144 [2630560/82468 (99%)]	Loss: 0.125198
+Make prediction for 4124 samples...
+0.06810632 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 145 [0/82468 (0%)]	Loss: 0.182091
+Train epoch: 145 [332880/82468 (12%)]	Loss: 0.109062
+Train epoch: 145 [660840/82468 (25%)]	Loss: 0.104662
+Train epoch: 145 [986040/82468 (37%)]	Loss: 0.112010
+Train epoch: 145 [1307840/82468 (49%)]	Loss: 0.118645
+Train epoch: 145 [1659500/82468 (62%)]	Loss: 0.104379
+Train epoch: 145 [1968600/82468 (74%)]	Loss: 0.110627
+Train epoch: 145 [2286620/82468 (86%)]	Loss: 0.121319
+Train epoch: 145 [2653440/82468 (99%)]	Loss: 0.093829
+Make prediction for 4124 samples...
+0.0055830986 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 146 [0/82468 (0%)]	Loss: 0.105804
+Train epoch: 146 [329780/82468 (12%)]	Loss: 0.110431
+Train epoch: 146 [653120/82468 (25%)]	Loss: 0.104548
+Train epoch: 146 [999840/82468 (37%)]	Loss: 0.106311
+Train epoch: 146 [1334320/82468 (49%)]	Loss: 0.097085
+Train epoch: 146 [1630300/82468 (62%)]	Loss: 0.090629
+Train epoch: 146 [1995720/82468 (74%)]	Loss: 0.123845
+Train epoch: 146 [2321480/82468 (86%)]	Loss: 0.105992
+Train epoch: 146 [2584640/82468 (99%)]	Loss: 0.103947
+Make prediction for 4124 samples...
+0.007344105 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 147 [0/82468 (0%)]	Loss: 0.116726
+Train epoch: 147 [325920/82468 (12%)]	Loss: 0.106050
+Train epoch: 147 [660920/82468 (25%)]	Loss: 0.100280
+Train epoch: 147 [992040/82468 (37%)]	Loss: 0.111636
+Train epoch: 147 [1324320/82468 (49%)]	Loss: 0.101721
+Train epoch: 147 [1643500/82468 (62%)]	Loss: 0.094106
+Train epoch: 147 [1958520/82468 (74%)]	Loss: 0.120381
+Train epoch: 147 [2310280/82468 (86%)]	Loss: 0.095892
+Train epoch: 147 [2632000/82468 (99%)]	Loss: 0.104177
+Make prediction for 4124 samples...
+0.010200092 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 148 [0/82468 (0%)]	Loss: 0.109807
+Train epoch: 148 [333280/82468 (12%)]	Loss: 0.122300
+Train epoch: 148 [666840/82468 (25%)]	Loss: 0.104569
+Train epoch: 148 [1006920/82468 (37%)]	Loss: 0.108719
+Train epoch: 148 [1340000/82468 (49%)]	Loss: 0.109636
+Train epoch: 148 [1648100/82468 (62%)]	Loss: 0.117960
+Train epoch: 148 [1991880/82468 (74%)]	Loss: 0.117029
+Train epoch: 148 [2330300/82468 (86%)]	Loss: 0.121641
+Train epoch: 148 [2634880/82468 (99%)]	Loss: 0.089936
+Make prediction for 4124 samples...
+0.030063707 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 149 [0/82468 (0%)]	Loss: 0.124189
+Train epoch: 149 [325400/82468 (12%)]	Loss: 0.126617
+Train epoch: 149 [662560/82468 (25%)]	Loss: 0.137789
+Train epoch: 149 [1002000/82468 (37%)]	Loss: 0.102978
+Train epoch: 149 [1326400/82468 (49%)]	Loss: 0.109310
+Train epoch: 149 [1656200/82468 (62%)]	Loss: 0.113011
+Train epoch: 149 [1992240/82468 (74%)]	Loss: 0.117171
+Train epoch: 149 [2290680/82468 (86%)]	Loss: 0.105320
+Train epoch: 149 [2629120/82468 (99%)]	Loss: 0.102615
+Make prediction for 4124 samples...
+0.010440682 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
+Training on 82468 samples...
+Train epoch: 150 [0/82468 (0%)]	Loss: 0.107845
+Train epoch: 150 [328520/82468 (12%)]	Loss: 0.103363
+Train epoch: 150 [663600/82468 (25%)]	Loss: 0.097909
+Train epoch: 150 [994320/82468 (37%)]	Loss: 0.113260
+Train epoch: 150 [1322720/82468 (49%)]	Loss: 0.096394
+Train epoch: 150 [1652500/82468 (62%)]	Loss: 0.097309
+Train epoch: 150 [1980480/82468 (74%)]	Loss: 0.093522
+Train epoch: 150 [2297960/82468 (86%)]	Loss: 0.097062
+Train epoch: 150 [2622400/82468 (99%)]	Loss: 0.090988
+Make prediction for 4124 samples...
+0.04004501 No improvement since epoch  130 ; best_mse,best_ci: 0.003428909 0.6580354837670827 GINConvNet davis
