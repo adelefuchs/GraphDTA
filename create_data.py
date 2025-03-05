@@ -79,10 +79,7 @@ for dataset in datasets:
     affinity = np.asarray(affinity)
     opts = ['train','test']
     for opt in opts:
-        print('AAAAAGDUAYGFYADGFLAUNDFLIUASHFNLIAAAAAA',dataset)
-        print("Affinity type:", type(affinity))
-        print("Affinity shape:", getattr(affinity, "shape", "No shape attribute"))
-        print("Affinity content preview:", affinity)
+        print("Affinity:", affinity)
         rows, cols = np.where(np.isnan(affinity)==False)  
         if opt=='train':
             rows,cols = rows[train_fold], cols[train_fold]
